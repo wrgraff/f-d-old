@@ -1,4 +1,5 @@
 body {
     color: map-get($colors, white);
     background-color: map-get($colors, black);
+    font-family: $global-font;
 }
