@@ -1,0 +1,15 @@
+{
+  "name": "frontend-design",
+  "version": "1.0.0",
+  "description": "My personal site with my vision about web-dev",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend",
+    "design"
+  ],
+  "author": "Artur Trifonov",
+  "license": "ISC"
+}
