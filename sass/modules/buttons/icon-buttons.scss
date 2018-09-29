@@ -2,38 +2,10 @@ $icon-button-size: rem-calc(32);
 
 .icon-button {
     position: relative;
+    display: block;
     width: $icon-button-size;
     height: $icon-button-size;
     border: none;
     background-color: transparent;
     cursor: pointer;
-}
-.menu-button__line {
-    position: absolute;
-    left: $bit / 2;
-    display: block;
-    width: $bit * 2;
-    height: $bit / 4;
-    background-color: map-get($colors, frontend);
-    transition: width $transition-duration $transition-function,
-                background-color $transition-duration $transition-function;
-
-    &:nth-child(1) {
-        top: $bit;
-    }
-    &:nth-child(2) {
-        width: $bit * 3;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    &:nth-child(3) {
-        bottom: $bit;
-    }
-
-    .icon-button:hover & {
-        background-color: white;
-        &:nth-child(1), &:nth-child(3) {
-            width: $bit * 3;
-        }
-    }
 }

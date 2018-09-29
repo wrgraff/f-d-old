@@ -4,7 +4,7 @@
     right: 0;
     top: 0;
     display: flex;
-    padding: $bit;
+    padding: $bit * 2;
 }
 .page-header__item {
     display: flex;
@@ -17,12 +17,12 @@
 }
 .header-line {
     flex-grow: 2;
-    margin-top: $bit / 2;
 
     &::after {
         content: '';
         width: 100%;
         height: $bit / 4;
+        margin-top: $bit / 2;
         background-color: map-get($colors, design);
         background-image: linear-gradient(to right, map-get($colors, frontend), map-get($colors, design));
     }

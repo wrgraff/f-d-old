@@ -1,3 +1,5 @@
 .page-body {
-    background-color: blue;
+    max-width: rem-calc(790);
+    margin: auto;
+    padding: ($bit * 14) 0;
 }

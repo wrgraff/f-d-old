@@ -1,0 +1,41 @@
+.mail-button__box {
+    position: absolute;
+    left: rem-calc(4);
+    right: rem-calc(4);
+    top: rem-calc(7);
+    bottom: rem-calc(7);
+    border-width: rem-calc(2);
+    border-style: solid;
+    border-width: rem-calc(2);
+    border-color: map-get($colors, design);
+    // background-color: map-get($colors, design);
+    transition: border-color $transition-duration $transition-function;
+
+    .mail-button:hover & {
+        border-color: map-get($colors, white);
+    }
+}
+.mail-button__line {
+    position: absolute;
+    top: rem-calc(8);
+    display: block;
+    width: rem-calc(14);
+    height: rem-calc(2);
+    background-color: map-get($colors, design);
+    transition: background-color $transition-duration $transition-function;
+
+    &:nth-child(2) {
+        left: rem-calc(5);
+        transform-origin: left top;
+        transform: rotate(30deg);
+    }
+    &:nth-child(3) {
+        right: rem-calc(5);
+        transform-origin: right top;
+        transform: rotate(-30deg);
+    }
+
+    .mail-button:hover & {
+        background-color: map-get($colors, white);
+    }
+}
