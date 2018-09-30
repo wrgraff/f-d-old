@@ -1,0 +1,35 @@
+$autor-img-size: rem-calc(56);
+
+.autor {
+    display: flex;
+    align-items: center;
+    color: map-get($colors, gray);
+    font-size: rem-calc(16);
+}
+.autor__image {
+    position: relative;
+    width: $autor-img-size;
+    height: $autor-img-size;
+    margin-right: $bit * 2;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(map-get($colors, frontend), .3);
+        background-image: linear-gradient(45deg, rgba(map-get($colors, frontend), .25), rgba(map-get($colors, design), .25));
+    }
+}
+.autor__text {
+    p {
+        margin-bottom: 0;
+    }
+}

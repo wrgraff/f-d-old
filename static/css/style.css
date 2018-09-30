@@ -2,9 +2,24 @@
 body {
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #D5D5D5;
   background-color: #000;
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.6; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: inherit; }
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 2rem; }
 
 .page-header {
   position: fixed;
@@ -86,7 +101,7 @@ body {
   border-color: #5040FF;
   transition: border-color 250ms cubic-bezier(0.19, 1, 0.22, 1); }
   .mail-button:hover .mail-button__box {
-    border-color: #fff; }
+    border-color: #D5D5D5; }
 
 .mail-button__line {
   position: absolute;
@@ -105,11 +120,49 @@ body {
     transform-origin: right top;
     transform: rotate(-30deg); }
   .mail-button:hover .mail-button__line {
-    background-color: #fff; }
+    background-color: #D5D5D5; }
 
 .main-menu {
   display: none; }
 
 .section {
   display: flex;
+  margin: 0 -1.5rem;
   padding: 5rem 0; }
+  .section > * {
+    padding: 0 1.5rem; }
+
+.section-header {
+  flex-shrink: 0;
+  flex-basis: 30%; }
+
+.section-body {
+  margin-top: 0.5rem; }
+
+.autor {
+  display: flex;
+  align-items: center;
+  color: #757575;
+  font-size: 1rem; }
+
+.autor__image {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  overflow: hidden; }
+  .autor__image img {
+    max-width: 100%; }
+  .autor__image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 96, 96, 0.3);
+    background-image: linear-gradient(45deg, rgba(255, 96, 96, 0.25), rgba(80, 64, 255, 0.25)); }
+
+.autor__text p {
+  margin-bottom: 0; }
