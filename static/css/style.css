@@ -17,6 +17,18 @@ h2 {
   font-size: 2.25rem;
   font-weight: 700; }
 
+h3 {
+  font-size: 2.25rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.125rem; }
+
+h6 {
+  font-size: 1.125rem; }
+
 p {
   margin-top: 0;
   margin-bottom: 2rem; }
@@ -166,3 +178,31 @@ p {
 
 .autor__text p {
   margin-bottom: 0; }
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.services__item {
+  padding-left: 2rem;
+  font-weight: 300;
+  counter-increment: service-item; }
+  .services__item h5 {
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: #FF6060;
+    font-weight: inherit; }
+    .services__item h5:before {
+      content: "0" counter(service-item);
+      position: absolute;
+      right: 100%;
+      margin-right: 0.5rem;
+      color: #757575;
+      font-weight: 700; }
+  .services__item p {
+    color: #757575;
+    font-size: 1rem; }
