@@ -33,13 +33,16 @@
     background-color: map-get($colors, white);
     border-radius: $radius;
     overflow: hidden;
+    transition: transform $transition-duration $transition-function,
+                opacity $transition-duration $transition-function;
 
     img {
         max-width: 100%;
     }
 }
 .works__item_disabled {
-    display: none;
+    transform: scale(.9);
+    opacity: .3;
 }
 .works__title {
     display: block;
