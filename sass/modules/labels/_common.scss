@@ -1,0 +1,16 @@
+.label {
+    display: inline-block;
+    padding: rem-calc(0 8 2);
+    font-size: rem-calc(14);
+    background-color: map-get($colors, black);
+    border-radius: $radius;
+}
+.label_color-frontend {
+    background-color: map-get($colors, frontend);
+}
+.label_color-adaptive {
+    background-color: map-get($colors, adaptive);
+}
+.label_color-design {
+    background-color: map-get($colors, design);
+}

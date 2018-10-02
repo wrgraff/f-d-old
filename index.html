@@ -42,47 +42,239 @@
 
         <div class="page-body">
             <section class="section">
-                <header class="section-header">
-                    <h2>Фронтенд  и&nbsp;дизайн?</h2>
-                </header>
-                <div class="section-body">
-                    <p>Фронтенд и дизайн должны работать как единое целое. Уже не получится создать удобный интерфейс, не понимая как работают html-элементы. Точно так же, как не получится создать хорошую дизайн-систему, не понимая принципов композиции.</p>
-                    <p>Разработчик и дизайнер должны понимать друг друга, либо быть одним человеком.</p>
+                <div class="section__wrapper">
+                    <header class="section__header">
+                        <h2>Фронтенд  и&nbsp;дизайн?</h2>
+                    </header>
+                    <div class="section__body">
+                        <p>Фронтенд и дизайн должны работать как единое целое. Уже не получится создать удобный интерфейс, не понимая как работают html-элементы. Точно так же, как не получится создать хорошую дизайн-систему, не понимая принципов композиции.</p>
+                        <p>Разработчик и дизайнер должны понимать друг друга, либо быть одним человеком.</p>
 
-                    <div class="autor">
-                        <div class="autor__image">
-                            <img src="/static/img/avatar.jpg" alt="Фото Артура Трифонова" />
-                        </div>
-                        <div class="autor__text">
-                            <p>Artur Trifonov<br />
-                            Frontend developer & web designer</p>
+                        <div class="autor">
+                            <div class="autor__image">
+                                <img src="/static/img/content/avatar.jpg" alt="Фото Артура Трифонова" />
+                            </div>
+                            <div class="autor__text">
+                                <p>Artur Trifonov<br />
+                                Frontend developer & web designer</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="section">
-                <header class="section-header">
-                    <h2>Чем я&nbsp;могу помочь</h2>
-                </header>
-                <div class="section-body">
-                    <ul class="services">
-                        <li class="services__item">
-                            <h5>Верстка</h5>
-                            <p>Есть готовый дизайн-макет? Подготовлю его к установке на систему</p>
+                <div class="section__wrapper">
+                    <header class="section__header">
+                        <h2>Чем я&nbsp;могу помочь</h2>
+                    </header>
+                    <div class="section__body">
+                        <ul class="services">
+                            <li class="services__item">
+                                <h5>Верстка</h5>
+                                <p>Есть готовый дизайн-макет? Подготовлю его к установке на систему</p>
+                            </li>
+                            <li class="services__item">
+                                <h5>Дизайн + верстка</h5>
+                                <p>Использую метод дизайна в браузере, так что верстка будет готова сразу</p>
+                            </li>
+                            <li class="services__item">
+                                <h5>Адаптивность</h5>
+                                <p>Подготовлю сайт к работе на всех мыслимых устройствах</p>
+                            </li>
+                            <li class="services__item">
+                                <h5>Устранение ошибок</h5>
+                                <p>Исправлю ошибки, оптимизирую код, сниму порчу</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section__wrapper">
+                    <header class="section__header">
+                        <h2>Кое-какие работы</h2>
+                    </header>
+                    <div class="section__body">
+                        <p>Собрал кое-что из последних работ, распредлелил их по типам выполненных задач.</p>
+                        <p class="works-filter">Можно отфильтровать работы для которых я делал <span class="works-filter__item works-filter__item_frontend" data-label="frontend">верстку</span>, <span class="works-filter__item works-filter__item_design" data-label="design">дизайн</span> и <span class="works-filter__item works-filter__item_adaptive" data-label="adaptive">адаптивность</span>.</p>
+                    </div>
+                </div>
+                <div class="section__wrapper section__wrapper_stretched">
+                    <ul class="works">
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/prointech.jpg" alt="Превью сайта-каталога Проинтех" />
+                            </div>
+                            <a href="http://www.prointech.ru/" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт-каталог телекоммуникационного оборудования Проинтех</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    www.prointech.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
                         </li>
-                        <li class="services__item">
-                            <h5>Дизайн + верстка</h5>
-                            <p>Использую метод дизайна в браузере, так что верстка будет готова сразу</p>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/videomix.jpg" alt="Превью сайта Видеомикс" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт систем видеоанализа Видеомикс</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    videomix.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
                         </li>
-                        <li class="services__item">
-                            <h5>Адаптивность</h5>
-                            <p>Подготовлю сайт к работе на всех мыслимых устройствах</p>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/fomin.jpg" alt="Превью сайта-каталога Фомин-мебель" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт-каталог Фомин-мебель</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    fomin-mebel.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                                <li class="label label_color-design">design</li>
+                            </ul>
                         </li>
-                        <li class="services__item">
-                            <h5>Устранение ошибок</h5>
-                            <p>Исправлю ошибки, оптимизирую код, сниму порчу</p>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/sse.jpg" alt="Превью сайта СШЭ" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт Стокгольмской Школы Экономики в России</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    www.sserussia.org
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                                <li class="label label_color-design">design</li>
+                            </ul>
                         </li>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/sensormatica.jpg" alt="Превью сайта-каталога Сенсорматика" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт-каталог КиП и автоматики Сенсорматика</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    sensormatica.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-adaptive">adaptive</li>
+                                <li class="label label_color-design">design</li>
+                            </ul>
+                        </li>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/flover.jpg" alt="Превью сайта FLOVER" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Интернет-магазин букетов FLOVER</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    floverart.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
+                        </li>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/biteh.png" alt="Превью сайта Битех" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Интернет-магазин промышленного оборудования Битех</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    bi-teh.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
+                        </li>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/businesstat.png" alt="Превью сайта БизнесСтат" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Сайт-каталог аналитических отчетов БизнесСтат</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    businesstat.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
+                        </li>
+
+                        <li class="works__item">
+                            <div class="works__img">
+                                <img src="/static/img/works/pilbet.svg" alt="Превью сайта Пилбет" />
+                            </div>
+                            <a href="#" class="works__title" target="_blank">
+                                <span class="works__title-text">Одностраничный сайт строительной компании Пилбет</span>
+                                <span class="works__title-anchor">
+                                    <span class="works__title-link">
+                                        <span class="works__title-link-line"></span>
+                                    </span>
+                                    pilbet.ru
+                                </span>
+                            </a>
+                            <ul class="works__labels">
+                                <li class="label label_color-frontend">frontend</li>
+                                <li class="label label_color-adaptive">adaptive</li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </section>
@@ -92,5 +284,7 @@
 
         </footer>
     </main>
+
+    <script src="/static/js/app/works/filter.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     top: 0;
     display: flex;
     padding: $bit * 2;
+    z-index: 100;
 }
 .page-header__item {
     display: flex;
