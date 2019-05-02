@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task manager for Sensormatica</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@0.1.2/dist/css/app.css">
+</head>
+<body>
+    <div class="page-layout">
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">F—D</a></li>
+                    <li class="breadcrumbs__item"><a href="/task-manager/sensormatica/" class="breadcrumbs__link">Sensormatica</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-layout__main page-main">
+            <section class="page-main__content section" id="setTask">
+                <form method="post" action="/static/php/form/contact.php" data-validate>
+                    <header class="section__header">
+                        <h3>Добавить задачу</h3>
+                    </header>
+                    <div class="section__body">
+                        <label class="input">
+                            <input type="text" name="task_name" required class="input__field" />
+                            <span class="input__text">Название задачи</span>
+                            <span class="input__helper">Опишите суть задачи</span>
+                            <span class="input__error"></span>
+                        </label>
+
+                        <label class="input">
+                            <input type="date" name="task_date" class="input__field" />
+                            <span class="input__text">Срок выполнения</span>
+                            <span class="input__helper">Введите желаемый срок выполнения задачи. Срок может быть изменен в зависимости от загрузки</span>
+                            <span class="input__error"></span>
+                        </label>
+
+                        <label class="input">
+                            <textarea name="task_comment" rows="4" class="input__field"></textarea>
+                            <span class="input__text">Детали</span>
+                            <span class="input__helper">Опишите детали задачи и добавьте ссылки, если это требуется</span>
+                            <span class="input__error"></span>
+                        </label>
+
+                        <fieldset>
+                            <legend>Тип задачи</legend>
+
+                            <label class="checkbox">
+                                <input type="checkbox" name="task_type_frontend" value="Frontend" class="checkbox__input" />
+                                <span class="checkbox__text">Верстка и фронтенд</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="task_type_design" value="Design" class="checkbox__input" />
+                                <span class="checkbox__text">Дизайн</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="task_type_consult" value="Consulting" class="checkbox__input" />
+                                <span class="checkbox__text">Консультирование</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="task_type_management" value="Management" class="checkbox__input" />
+                                <span class="checkbox__text">Менеджмент</span>
+                            </label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Приоритет задачи</legend>
+
+                            <label class="radio">
+                                <input type="radio" name="task_priority" value="4" class="radio__input" />
+                                <span class="radio__text">Низкий</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="task_priority" value="3" class="radio__input" checked />
+                                <span class="radio__text">Средний</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="task_priority" value="2" class="radio__input" />
+                                <span class="radio__text">Высокий</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="task_priority" value="1" class="radio__input" />
+                                <span class="radio__text">Безумный</span>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <footer class="section__footer section__footer_justify_end">
+                        <div class="buttons-group buttons-group_align_right">
+                            <button type="reset" class="button">Сбросить</button>
+                            <button type="submit" class="button button_color_primary">Поставить задачу </button>
+                        </div>
+                    </footer>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/wrgraff/interfacer@0.1.2/dist/js/app.js"></script>
+    <script src="/static/js/app/forms/sender.js"></script>
+
+</body>
+</html>
