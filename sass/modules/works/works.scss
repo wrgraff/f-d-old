@@ -112,6 +112,7 @@ $works__title-link-size: rem-calc(80);
     height: $works__title-link-size;
     margin: 0 auto;
     transition: margin $transition-duration $transition-function;
+    will-change: transform;
 
     &::before {
         content: '';
@@ -125,6 +126,7 @@ $works__title-link-size: rem-calc(80);
         z-index: -1;
         transition: opacity $transition-duration $transition-function,
                     transform $transition-duration $transition-function;
+        will-change: transform;
     }
 
     .works__item:hover & {
@@ -134,6 +136,10 @@ $works__title-link-size: rem-calc(80);
             transform: scale(1);
         }
     }
+}
+.works__title-site {
+    position: relative;
+    z-index: 5;
 }
 $works__title-link-line-size: 4px;
 .works__title-link-line {
@@ -147,12 +153,12 @@ $works__title-link-line-size: 4px;
     background-color: white;
     opacity: 0;
     transition: opacity $transition-duration $transition-function;
+    will-change: transform;
 
     &::before, &::after {
         content: '';
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         display: block;
         box-sizing: border-box;
         width: $works__title-link-line-size * 5;
@@ -161,20 +167,22 @@ $works__title-link-line-size: 4px;
         border-color: white;
         opacity: 0;
         transition: opacity $transition-duration $transition-function,
-                    left 500ms $transition-function,
-                    right 500ms $transition-function;
+                    transform 500ms $transition-function;
+        will-change: transform;
     }
     &::before {
-        transform: translateX($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
+        transform: translateY(-50%) translateX(($works__title-link-line-size * -5) - ($works__title-link-line-size / 2));
         border-width: ($works__title-link-line-size) 0 ($works__title-link-line-size) ($works__title-link-line-size);
         border-radius: ($works__title-link-line-size * 5) 0 0 ($works__title-link-line-size * 5);
         transition-delay: 150ms;
+        will-change: transform;
     }
     &::after {
-        transform: translateX($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
+        transform: translateY(-50%) translateX(($works__title-link-line-size * 5) - ($works__title-link-line-size / 2));
         border-width: ($works__title-link-line-size) ($works__title-link-line-size) ($works__title-link-line-size) 0;
         border-radius: 0 ($works__title-link-line-size * 5) ($works__title-link-line-size * 5) 0;
         transition-delay: 150ms;
+        will-change: transform;
     }
 
     .works__item:hover & {
@@ -184,10 +192,10 @@ $works__title-link-line-size: 4px;
             opacity: 1;
         }
         &::before {
-            left: ($works__title-link-line-size * -3) - ($works__title-link-line-size / 2);
+            transform: translateY(-50%) translateX(($works__title-link-line-size * -3) - ($works__title-link-line-size / 2));
         }
         &::after {
-            right: ($works__title-link-line-size * -3) - ($works__title-link-line-size / 2);
+            transform: translateY(-50%) translateX(($works__title-link-line-size * 3) - ($works__title-link-line-size / 2));
         }
     }
 }
@@ -230,6 +238,7 @@ $works__title-link-line-size: 4px;
         filter: grayscale(100%);
         transition: filter 500ms $transition-function,
                     background-color 500ms $transition-function;
+        will-change: filter;
     }
 
     .works__item:hover & {
@@ -244,21 +253,23 @@ $works__title-link-line-size: 4px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: $bit * -5;
+    bottom: 0;
     margin: 0;
     padding: ($bit * 10) ($bit * 2) ($bit * 2);
     list-style: none;
     @include work-gradient-black;
     opacity: 0;
-    transition: bottom $transition-duration $transition-function,
+    transform: translateY($bit * 5);
+    transition: transform $transition-duration $transition-function,
                 opacity $transition-duration $transition-function;
+    will-change: transform;
 
     .label {
-        position: relative;
-        left: $bit * 3;
+        transform: translateX($bit * 3);
         opacity: 0;
-        transition: left 150ms ease-in-out, opacity 180ms ease-in-out;
+        transition: transform 150ms ease-in-out, opacity 180ms ease-in-out;
         transition-delay: 80ms;
+        will-change: transform;
 
         &:nth-child(2) {
             transition-delay: 160ms;
@@ -269,11 +280,11 @@ $works__title-link-line-size: 4px;
     }
 
     .works__item:hover & {
-        bottom: 0;
+        transform: translateY(0);
         opacity: 1;
 
         .label {
-            left: 0;
+            transform: translateX(0);
             opacity: 1;
         }
     }

@@ -1,0 +1,15 @@
+.page-footer {
+    text-align: center;
+    padding: ($bit * 4);
+}
+.page-footer__link {
+    font-family: 'Ubuntu Mono', sans-serif;
+    text-decoration: none;
+    color: map-get($colors, design);
+    border-bottom: 2px solid;
+    transition: color $transition-duration $transition-function;
+
+    &:hover {
+        color: map-get($colors, frontend);
+    }
+}
