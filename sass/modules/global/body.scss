@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    color: map-get($colors, white);
-    background-color: map-get($colors, black);
+    color: map-get($colors, black);
+    background-color: map-get($colors, white);
     font-family: $global-font;
     font-size: rem-calc(18);
     font-weight: 300;

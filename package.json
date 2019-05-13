@@ -4,7 +4,6 @@
   "description": "My personal site with my vision about web-dev",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "frontend",
@@ -15,6 +14,16 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-livereload": "^4.0.0",
-    "gulp-sass": "^4.0.1"
-  }
+    "gulp-sass": "^4.0.1",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrgraff/f-d.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wrgraff/f-d/issues"
+  },
+  "homepage": "https://github.com/wrgraff/f-d#readme"
 }

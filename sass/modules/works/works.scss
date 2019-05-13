@@ -165,13 +165,13 @@ $works__title-link-line-size: 4px;
                     right 500ms $transition-function;
     }
     &::before {
-        left: ($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
+        transform: translateX($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
         border-width: ($works__title-link-line-size) 0 ($works__title-link-line-size) ($works__title-link-line-size);
         border-radius: ($works__title-link-line-size * 5) 0 0 ($works__title-link-line-size * 5);
         transition-delay: 150ms;
     }
     &::after {
-        right: ($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
+        transform: translateX($works__title-link-line-size * -5) - ($works__title-link-line-size / 2);
         border-width: ($works__title-link-line-size) ($works__title-link-line-size) ($works__title-link-line-size) 0;
         border-radius: 0 ($works__title-link-line-size * 5) ($works__title-link-line-size * 5) 0;
         transition-delay: 150ms;
