@@ -3,21 +3,25 @@
   "version": "1.0.0",
   "description": "My personal site with my vision about web-dev",
   "main": "index.html",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "frontend",
     "design"
   ],
   "author": "Artur Trifonov",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-livereload": "^4.0.0",
-    "gulp-sass": "^4.0.1",
-    "parcel-bundler": "^1.12.3"
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-include": "^2.4.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "jshint": "^2.10.2"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wrgraff/f-d.git"

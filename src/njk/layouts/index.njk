@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}} — Interfacer</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page-layout">
+        <nav class="page-layout__nav global-nav">
+            {% include "blocks/menu.njk" %}
+        </nav>
+
+        <header class="page-layout__header page-header">
+            <nav class="page-header__item">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__item">
+                <a href="https://github.com/wrgraff/interfacer" class="button button_color_primary">View on GitHub</a>
+            </div>
+        </header>
+
+        <main class="page-layout__main page-main">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
