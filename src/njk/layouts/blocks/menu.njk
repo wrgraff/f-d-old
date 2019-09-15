@@ -1,10 +1,26 @@
-<ul class="global-nav__menu menu menu_vertical" id="menu">
-    <ul id="" class="nav navbar-nav navbar-right">
-        <li {% if navActiveItem == 0 %}class="active"{% endif %}>
-            <a href="index.html">Главная</a>
-        </li>
-        <li {% if navActiveItem == 1 %}class="active"{% endif %}>
-            <a href="feedback.html">Обратная связь</a>
-        </li>
+{% set menuItems = [
+    {
+        name: "Works",
+        address: 'works'
+    },{
+        name: "About",
+        address: 'about'
+    },{
+        name: "Contacts",
+        address: 'contacts'
+    }
+] %}
+
+{% macro addMenuItem(name, address) %}
+    <li class="menu__item{{ ' menu__item_active' if (activePage == address) }}">
+        <a href="/{{ address }}/">{{ name }}</a>
+    </li>
+{% endmacro %}
+
+<nav>
+    <ul class="menu">
+        {% for item in menuItems %}
+            {{ addMenuItem(item.name, item.address) }}
+        {% endfor %}
     </ul>
-</ul>
+</nav>

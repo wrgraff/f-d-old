@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}} — Interfacer</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    {% include "blocks/head/common.njk" %}
 </head>
+
 <body>
     <div class="page-layout">
-        <nav class="page-layout__nav global-nav">
-            {% include "blocks/menu.njk" %}
-        </nav>
-
-        <header class="page-layout__header page-header">
-            <nav class="page-header__item">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Interfacer</a></li>
-                </ul>
-            </nav>
-            <div class="page-header__item">
-                <a href="https://github.com/wrgraff/interfacer" class="button button_color_primary">View on GitHub</a>
+        <aside class="page-layout__aside aside">
+            <div class="aside__header header">
+                <a href="/" class="logo">f–d</a>
             </div>
-        </header>
 
-        <main class="page-layout__main page-main">
+            {% include "blocks/menu.njk" %}
+        </aside>
+
+        <main class="page-layout__main main">
+            <div class="main__header header">
+                <a href="/" class="name">Artur Trifonov portfolio</a>
+            </div>
             {% block content %}
             {% endblock %}
         </main>
