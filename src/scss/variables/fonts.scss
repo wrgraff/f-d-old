@@ -1,2 +1,7 @@
-$global-font: 'Ubuntu', sans-serif;
-$header-font: 'Ubuntu Mono', sens-serif;
+:root {
+    --global-font: 'Ubuntu', sans-serif;
+    --header-font: 'Ubuntu Mono', monospace;
+
+    --font-size: 1.25rem;
+    --font-weight: 300;
+}
