@@ -1,0 +1,16 @@
+:root {
+    --page-layout-aside-width: 16rem;
+
+    @media screen and (min-width: 1200px) {
+        --page-layout-aside-width: 20rem;
+    }
+}
+
+.page-layout {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.page-layout__aside {
+    flex: var(--page-layout-aside-width) 0 0;
+}
