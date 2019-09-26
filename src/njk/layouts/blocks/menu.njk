@@ -13,7 +13,7 @@
 
 {% macro addMenuItem(name, address) %}
     <li class="menu__item{{ ' menu__item_active' if (activePage == address) }}">
-        <a href="/{{ address }}/">{{ name }}</a>
+        <a href="/{{ address }}/" class="menu__link">{{ name }}</a>
     </li>
 {% endmacro %}
 

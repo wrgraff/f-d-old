@@ -16,7 +16,7 @@
     <link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32">
     <link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32">
     <link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400|Ubuntu:300&display=swap" rel="stylesheet">
 
     <!-- MS -->
     <meta name="application-name" content="Site name">
@@ -45,10 +45,54 @@
 
 <body>
     <div class="page-layout">
-        <aside class="page-layout__aside aside">
-            <div class="aside__header header">
-                <a href="/" class="logo">f–d</a>
+        <main class="page-layout__main main">
+            <div class="main__header header">
+                <a href="/" class="name">Artur Trifonov</a>
             </div>
+
+            <section class="main__section main__section_promo promo">
+                <div class="promo__photo">
+                    <picture>
+                        <source srcset="/static/img/i.webp 1x,
+                                /static/img/i@2x.webp 2x" type="image/webp" />
+                        <img src="/static/img/i.jpg" srcset="/static/img/i@2x.jpg 2x" alt="Фото Артура Трифонова" />
+                    </picture>
+                </div>
+
+                <div class="promo__text">
+                    <p class="promo__title">I develop sites: adaptive, bem, vanilla js and a11y.</p>
+                    <ul>
+                        <li>
+                            <a href="https://linkedin.com/in/arturtrifonov">GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/arturtrifonov">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/arturtrifonov">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/arturtrifonov">HTML Academy</a>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="button">Contact me</button>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="page-layout__aside aside">
+            <header class="aside__header header">
+                <a href="/" class="logo" aria-label="frontend-design">
+                    <span class="logo__f">f</span>
+                    <span class="logo__line"></span>
+                    <span class="logo__d">d</span>
+                </a>
+            </header>
 
 
 
@@ -59,19 +103,19 @@
 
 
                     <li class="menu__item menu__item_active">
-                        <a href="/works/">Works</a>
+                        <a href="/works/" class="menu__link">Works</a>
                     </li>
 
 
 
                     <li class="menu__item">
-                        <a href="/about/">About</a>
+                        <a href="/about/" class="menu__link">About</a>
                     </li>
 
 
 
                     <li class="menu__item">
-                        <a href="/contacts/">Contacts</a>
+                        <a href="/contacts/" class="menu__link">Contacts</a>
                     </li>
 
 
@@ -79,23 +123,6 @@
             </nav>
 
         </aside>
-
-        <main class="page-layout__main main">
-            <div class="main__header header">
-                <a href="/" class="name">Artur Trifonov portfolio</a>
-            </div>
-
-            <section class="page-main__content section">
-                <header class="section__header">
-                    <h2>What Interfacer is?</h2>
-                </header>
-                <div class="section__body">
-                    <p>My own framefork for interfaces. Current version: 0.1.4</p>
-                    <p>Docs in progress, sorry</p>
-                </div>
-            </section>
-
-        </main>
     </div>
 
     <script src="/static/js/app.js"></script>

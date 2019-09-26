@@ -1,0 +1,9 @@
+a {
+    color: var(--color-blue);
+    text-decoration: none;
+    transition: color 200ms;
+
+    &:hover {
+        color: var(--color-red);
+    }
+}

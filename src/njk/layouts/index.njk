@@ -6,21 +6,25 @@
 
 <body>
     <div class="page-layout">
-        <aside class="page-layout__aside aside">
-            <div class="aside__header header">
-                <a href="/" class="logo">f–d</a>
-            </div>
-
-            {% include "blocks/menu.njk" %}
-        </aside>
-
         <main class="page-layout__main main">
             <div class="main__header header">
-                <a href="/" class="name">Artur Trifonov portfolio</a>
+                <a href="/" class="name">Artur Trifonov</a>
             </div>
             {% block content %}
             {% endblock %}
         </main>
+
+        <aside class="page-layout__aside aside">
+            <header class="aside__header header">
+                <a href="/" class="logo" aria-label="frontend-design">
+                    <span class="logo__f">f</span>
+                    <span class="logo__line"></span>
+                    <span class="logo__d">d</span>
+                </a>
+            </header>
+
+            {% include "blocks/menu.njk" %}
+        </aside>
     </div>
 
     <script src="/static/js/app.js"></script>

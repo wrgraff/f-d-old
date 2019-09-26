@@ -1,0 +1,11 @@
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-family-header);
+}
+
+.menu__link {
+    color: var(--color-white);
+    text-transform: lowercase;
+}

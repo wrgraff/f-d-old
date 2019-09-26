@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     include = require("gulp-include"),
     nunjucks = require('gulp-nunjucks-render'),
-    prettify = require('gulp-html-prettify');
+    prettify = require('gulp-html-prettify'),
+    imagemin = require('gulp-imagemin'),
+    webp = require('gulp-webp');
 
 gulp.task('scss', () => {
     return gulp.src('src/scss/style.scss')
@@ -35,9 +37,19 @@ gulp.task('js', () => {
         .pipe(livereload());
 });
 
+gulp.task('img', () => {
+	return gulp.src('src/img/*')
+		.pipe(imagemin())
+        .pipe(gulp.dest('dist/static/img'))
+        .pipe(webp())
+		.pipe(gulp.dest('dist/static/img'))
+        .pipe(livereload());
+});
+
 gulp.task('default', () => {
     livereload.listen();
     gulp.watch('src/scss/**/*.scss', gulp.series('scss'));
     gulp.watch('src/js/**/*.js', gulp.series('js'));
     gulp.watch('src/njk/**/*.njk', gulp.series('njk'));
+    gulp.watch('src/img/**/*', gulp.series('img'));
 });
