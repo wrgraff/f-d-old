@@ -1,0 +1,18 @@
+$font-family: 'Gotham Pro';
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        // src: local('#{$font-family}'),
+        src: url("#{$file-path}.woff2") format('woff2'),
+             url("#{$file-path}.woff") format('woff'),
+             url("#{$file-path}.eot") format('eot'),
+             url("#{$file-path}.ttf") format('ttf');
+        font-weight: $font-weight;
+        font-style: $font-style;
+        font-display: swap;
+    }
+}
+
+@include font-face($font-family, '../font/gotham-regular', 400, normal);
+@include font-face($font-family, '../font/gotham-light', 300, normal);
+@include font-face($font-family, '../font/gotham-medium', 500, normal);

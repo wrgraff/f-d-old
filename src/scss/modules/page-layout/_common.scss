@@ -1,18 +1,17 @@
 :root {
-    --page-layout-aside-width: 3rem;
+    --page-layout-aside-width: 220px;
 
-    @media screen and (min-width: 50rem) {
-        --page-layout-aside-width: 16rem;
+    @media screen and (min-width: $breakpoint-medium) {
+        --page-layout-aside-width: 280px;
     }
-    @media screen and (min-width: 75rem) {
-        --page-layout-aside-width: 20rem;
+    @media screen and (min-width: $breakpoint-large) {
+        --page-layout-aside-width: 320px;
     }
 }
 
 .page-layout {
     display: flex;
     flex-wrap: nowrap;
-    // height: 100vh;
 }
 
 .page-layout__aside {
@@ -22,5 +21,4 @@
 
 .page-layout__main {
     flex-grow: 2;
-    // padding: 0 var(--gap-global);
 }

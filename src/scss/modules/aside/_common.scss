@@ -7,34 +7,3 @@
     padding: 0 var(--gap-global);
 
 }
-
-// .aside__promo {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     height: 90vh;
-//     height: calc(100vh - var(--header-height) - var(--gap-global));
-//     padding-bottom: calc(var(--header-height) + var(--gap-global));
-// }
-//
-// .aside__photo {
-//     position: relative;
-//     margin-left: 4rem;
-//     margin-left: calc(var(--gap-global) * 2);
-//
-//     &::before {
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         left: 0;
-//         background-color: var(--color-blue);
-//         opacity: .5;
-//     }
-//
-//     img {
-//         max-width: 100%;
-//     }
-// }

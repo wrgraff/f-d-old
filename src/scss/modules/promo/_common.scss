@@ -3,7 +3,6 @@
 
     display: flex;
     align-items: center;
-    font-family: var(--font-family-header);
 }
 
 .promo__photo {
@@ -17,9 +16,33 @@
 }
 
 .promo__text {
-    margin: 0 var(--gap-global);
+    max-width: 800px;
+    margin: 0 calc(var(--gap-global) * 2);
 }
 
 .promo__title {
-    font-size: 2.2em;
+    font-size: 44px;
+    font-weight: 500;
+    margin-bottom: var(--gap-global);
+}
+
+.promo__links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    font-size: 18px;
+    text-transform: lowercase;
+}
+
+.promo__link {
+    margin-right: calc(var(--margin-global) * 2);
+    border-bottom: 1px solid var(--color-blue);
+    transition: color 200ms, border-color 200ms;
+
+    &:hover {
+        border-color: var(--color-red);
+    }
 }
