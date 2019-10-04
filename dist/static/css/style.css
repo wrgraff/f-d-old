@@ -272,6 +272,7 @@ template {
   --color-red-light: #ffc6c6;
   --color-blue: #5040FF;
   --color-blue-light: #e6e3ff;
+  --color-blue-dark: #3927ff;
   --color-black: #000;
   --color-gray: #757575;
   --color-white: #fff; }
@@ -412,6 +413,12 @@ p {
   font-size: 1.3em;
   font-weight: 500; }
 
+.name:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--color-blue-light);
+  outline-offset: var(--margin-global); }
+
 .menu {
   margin: 0;
   padding: 0;
@@ -464,8 +471,15 @@ p {
 .promo__link {
   border-bottom: 2px solid var(--color-blue-light);
   transition: color 200ms, border-color 200ms; }
-  .promo__link:hover {
-    border-color: var(--color-red-light); }
+
+.promo__link:hover {
+  border-color: var(--color-red-light); }
+
+.promo__link:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--color-blue-light);
+  outline-offset: var(--margin-global); }
 
 .promo__button {
   flex-basis: 100%;
@@ -473,20 +487,40 @@ p {
   padding: 0 var(--gap-global); }
 
 :root {
-  --button-padding: 1rem 2rem; }
+  --button-padding: 1.2rem 2rem; }
 
 .button {
   display: inline-block;
   vertical-align: middle;
   padding: var(--button-padding);
+  border: none;
+  border-radius: 100px;
   color: var(--color-white);
   background-color: var(--color-blue);
-  border: none;
-  border-radius: 20rem;
-  font-family: var(--font-family-header);
-  font-size: var(--font-size);
-  text-transform: lowercase; }
+  font-size: inherit;
+  font-weight: font-weight(medium);
+  line-height: 1;
+  text-transform: lowercase;
+  transition: background-color 200ms, box-shadow 200ms; }
 
 .button img {
   margin-right: var(--margin-global);
   vertical-align: middle; }
+
+.button:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue-dark); }
+
+.button:active {
+  box-shadow: shadow(1-lvl);
+  box-shadow: shadow(1-lvl, var(--button-shadow-color)); }
+
+.button:focus {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--color-blue-light);
+  outline-offset: var(--margin-global); }
+
+.button[disabled] {
+  opacity: .3;
+  background-color: var(--color-blue); }

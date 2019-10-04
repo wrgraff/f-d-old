@@ -3,3 +3,10 @@
     font-size: 1.3em;
     font-weight: 500;
 }
+
+.name:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-blue-light);
+    outline-offset: var(--margin-global);
+}

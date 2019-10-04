@@ -1,0 +1,48 @@
+:root {
+    --button-padding: 1.2rem 2rem;
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: var(--button-padding);
+    border: none;
+    border-radius: 100px;
+
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    font-size: inherit;
+    font-weight: font-weight(medium);
+    line-height: 1;
+    text-transform: lowercase;
+
+    transition: background-color 200ms, box-shadow 200ms;
+}
+
+.button img {
+    margin-right: var(--margin-global);
+    vertical-align: middle;
+}
+
+.button:hover {
+    color: var(--color-white);
+    background-color: var(--color-blue-dark);
+}
+
+.button:active {
+    box-shadow: shadow(1-lvl);
+    box-shadow: shadow(1-lvl, var(--button-shadow-color));
+}
+
+.button:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-blue-light);
+    outline-offset: var(--margin-global);
+}
+
+.button[disabled] {
+    opacity: .3;
+    background-color: var(--color-blue);
+}

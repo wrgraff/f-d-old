@@ -3,6 +3,7 @@
     --color-red-light: #{lighten(#FF6060, 20%)};
     --color-blue: #5040FF;
     --color-blue-light: #{lighten(#5040FF, 32%)};
+    --color-blue-dark: #{darken(#5040FF, 5%)};
     --color-black: #000;
     --color-gray: #757575;
     --color-white: #fff;

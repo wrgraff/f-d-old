@@ -52,10 +52,15 @@
 .promo__link {
     border-bottom: 2px solid var(--color-blue-light);
     transition: color 200ms, border-color 200ms;
-
-    &:hover {
-        border-color: var(--color-red-light);
-    }
+}
+.promo__link:hover {
+    border-color: var(--color-red-light);
+}
+.promo__link:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-blue-light);
+    outline-offset: var(--margin-global);
 }
 
 .promo__button {
