@@ -269,7 +269,9 @@ template {
 
 :root {
   --color-red: #FF6060;
+  --color-red-light: #ffc6c6;
   --color-blue: #5040FF;
+  --color-blue-light: #e6e3ff;
   --color-black: #000;
   --color-gray: #757575;
   --color-white: #fff; }
@@ -378,7 +380,7 @@ p {
 
 .main__section_promo {
   height: 90vh;
-  height: calc(100vh - (var(--header-height) * 2) - (var(--gap-global) * 2)); }
+  height: calc(100vh - var(--header-height)); }
 
 :root {
   --header-height: 64px; }
@@ -389,8 +391,7 @@ p {
   display: flex;
   align-items: center;
   width: 100%;
-  height: var(--header-height);
-  margin-bottom: var(--gap-global); }
+  height: var(--header-height); }
 
 .logo {
   display: flex;
@@ -422,18 +423,24 @@ p {
   text-transform: lowercase; }
 
 .promo {
-  --photo-width: 700px;
+  --photo-width: 350px;
   display: flex;
-  align-items: center; }
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between; }
+  .promo::before {
+    content: '';
+    flex-basis: 100%; }
 
 .promo__photo {
   flex-shrink: 0;
-  flex-basis: var(--photo-width);
-  margin-left: calc(var(--photo-width) / -2); }
+  flex-basis: var(--photo-width); }
   .promo__photo img {
     max-width: 100%; }
 
 .promo__text {
+  flex-basis: 0px;
+  flex-grow: 1;
   max-width: 800px;
   margin: 0 calc(var(--gap-global) * 2); }
 
@@ -444,18 +451,26 @@ p {
 
 .promo__links {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 18px;
   text-transform: lowercase; }
 
+.promo__links-item {
+  margin-right: calc(var(--margin-global) * 2); }
+
 .promo__link {
-  margin-right: calc(var(--margin-global) * 2);
-  border-bottom: 1px solid var(--color-blue);
+  border-bottom: 2px solid var(--color-blue-light);
   transition: color 200ms, border-color 200ms; }
   .promo__link:hover {
-    border-color: var(--color-red); }
+    border-color: var(--color-red-light); }
+
+.promo__button {
+  flex-basis: 100%;
+  margin-bottom: var(--gap-global);
+  padding: 0 var(--gap-global); }
 
 :root {
   --button-padding: 1rem 2rem; }

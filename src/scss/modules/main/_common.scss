@@ -4,5 +4,5 @@
 
 .main__section_promo {
     height: 90vh;
-    height: calc(100vh - (var(--header-height) * 2) - (var(--gap-global) * 2);
+    height: calc(100vh - var(--header-height);
 }

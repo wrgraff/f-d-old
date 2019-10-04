@@ -1,6 +1,8 @@
 :root {
     --color-red: #FF6060;
+    --color-red-light: #{lighten(#FF6060, 20%)};
     --color-blue: #5040FF;
+    --color-blue-light: #{lighten(#5040FF, 32%)};
     --color-black: #000;
     --color-gray: #757575;
     --color-white: #fff;
