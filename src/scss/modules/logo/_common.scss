@@ -7,9 +7,34 @@
     font-weight: 500;
 }
 
+.logo:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--color-blue-light);
+    outline-offset: var(--margin-global);
+}
+
+.logo__f,
+.logo__d {
+    transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 .logo__line {
     flex-grow: 2;
     height: .125rem;
     margin: 0 var(--gap-global);
     background-color: var(--color-white);
+    transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover {
+    color: var(--color-white);
+}
+.logo:hover .logo__f {
+    transform: translateX(-6px);
+}
+.logo:hover .logo__d {
+    transform: translateX(6px);
+}
+.logo:hover .logo__line {
+    transform: scaleX(1.1);
 }

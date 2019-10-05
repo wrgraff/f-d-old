@@ -3,8 +3,8 @@
 }
 
 .button {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
     padding: var(--button-padding);
     border: none;
     border-radius: 100px;
@@ -20,9 +20,13 @@
     transition: background-color 200ms, box-shadow 200ms;
 }
 
-.button img {
+.button__img {
     margin-right: var(--margin-global);
     vertical-align: middle;
+}
+.button__img_right {
+    margin-left: var(--margin-global);
+    margin-right: 0;
 }
 
 .button:hover {
@@ -45,4 +49,9 @@
 .button[disabled] {
     opacity: .3;
     background-color: var(--color-blue);
+}
+
+.button_expanded {
+    width: 100%;
+    justify-content: space-around;
 }

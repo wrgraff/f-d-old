@@ -34,35 +34,6 @@
     margin-bottom: var(--gap-global);
 }
 
-.promo__links {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    font-size: 18px;
-    text-transform: lowercase;
-}
-
-.promo__links-item {
-    margin-right: calc(var(--margin-global) * 2);
-}
-.promo__link {
-    border-bottom: 2px solid var(--color-blue-light);
-    transition: color 200ms, border-color 200ms;
-}
-.promo__link:hover {
-    border-color: var(--color-red-light);
-}
-.promo__link:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: var(--color-blue-light);
-    outline-offset: var(--margin-global);
-}
-
 .promo__button {
     flex-basis: 100%;
     margin-bottom: var(--gap-global);

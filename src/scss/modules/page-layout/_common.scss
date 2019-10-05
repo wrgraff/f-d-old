@@ -15,10 +15,15 @@
 }
 
 .page-layout__aside {
-    flex: var(--page-layout-aside-width) 0 0;
-    max-width: var(--page-layout-aside-width);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: var(--page-layout-aside-width);
+    height: 100vh;
 }
 
 .page-layout__main {
     flex-grow: 2;
+    padding-right: var(--page-layout-aside-width);
 }

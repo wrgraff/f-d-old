@@ -46,7 +46,7 @@
 <body>
     <div class="page-layout">
         <main class="page-layout__main main">
-            <div class="main__header header">
+            <div class="main__header">
                 <a href="/" class="name">Artur Trifonov</a>
             </div>
 
@@ -64,28 +64,28 @@
                     <p class="promo__title">I develop sites: adaptive, bem, vanilla js and a11y.</p>
 
                     <h2 class="visually-hidden">Social network links</h2>
-                    <ul class="promo__links">
-                        <li class="promo__links-item">
-                            <a class="promo__link" href="https://github.com/wrgraff">GitHub</a>
+                    <ul class="promo__links social">
+                        <li class="social__item">
+                            <a class="social__link" href="https://github.com/wrgraff">GitHub</a>
                         </li>
-                        <li class="promo__links-item">
-                            <a class="promo__link" href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
+                        <li class="social__item">
+                            <a class="social__link" href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
                         </li>
-                        <li class="promo__links-item">
-                            <a class="promo__link" href="https://www.facebook.com/wrgraff">Facebook</a>
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.facebook.com/wrgraff">Facebook</a>
                         </li>
-                        <li class="promo__links-item">
-                            <a class="promo__link" href="https://twitter.com/a_sassafras">Twitter</a>
+                        <li class="social__item">
+                            <a class="social__link" href="https://twitter.com/a_sassafras">Twitter</a>
                         </li>
-                        <li class="promo__links-item">
-                            <a class="promo__link" href="https://htmlacademy.ru/profile/wrgraff">HTML Academy</a>
+                        <li class="social__item">
+                            <a class="social__link" href="https://htmlacademy.ru/profile/wrgraff">HTML Academy</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="promo__button">
                     <a class="button" href="#portfolio">
-                        <img src="/static/img/ico/arrow_down.svg" alt="Перейти ниже" aria-hidden="true">My works
+                        <img class="button__img" src="/static/img/ico/arrow_down.svg" alt="Перейти ниже" aria-hidden="true">My works
                     </a>
                 </div>
             </section>
@@ -98,7 +98,7 @@
         </main>
 
         <aside class="page-layout__aside aside">
-            <header class="aside__header header">
+            <header class="aside__header">
                 <a href="/" class="logo" aria-label="frontend-design">
                     <span class="logo__f">f</span>
                     <span class="logo__line"></span>
@@ -110,11 +110,11 @@
 
 
 
-            <nav>
+            <nav class="aside__nav">
                 <ul class="menu">
 
 
-                    <li class="menu__item menu__item_active">
+                    <li class="menu__item">
                         <a href="/works/" class="menu__link">Works</a>
                     </li>
 
@@ -134,6 +134,28 @@
                 </ul>
             </nav>
 
+
+            <footer class="aside__footer">
+                <ul class="aside__social social social_aside social_light">
+                    <li class="social__item">
+                        <a class="social__link" href="#">gh</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">li</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">fb</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">tw</a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="#">ha</a>
+                    </li>
+                </ul>
+
+                <a class="button button_color_white button_expanded" href="/contact-me/">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
+            </footer>
         </aside>
     </div>
 

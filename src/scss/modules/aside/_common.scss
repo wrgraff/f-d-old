@@ -1,9 +1,22 @@
 .aside {
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-blue);
 }
 
 .aside__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
     padding: 0 var(--gap-global);
+}
 
+.aside__footer {
+    padding: var(--gap-global);
+}
+
+.aside__social {
+    margin-bottom: var(--gap-global);
 }
