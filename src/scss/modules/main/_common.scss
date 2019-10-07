@@ -11,11 +11,24 @@
 .main__section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--gap-global);
+    padding: calc(var(--gap-global) * 3) var(--gap-global);
 }
 
 .main__section_promo {
     max-width: none;
     height: 100vh;
     padding: var(--header-height) 0 0;
+    border-bottom: 4px solid var(--color-gray-light);
+}
+
+.main__heading {}
+.main__subheading {
+    text-transform: uppercase;
+    font-size: var(--font-size-tiny);
+    font-weight: 400;
+
+    .main__heading + & {
+        margin-top: calc(var(--gap-global) * -1);
+        margin-bottom: var(--gap-global);
+    }
 }
