@@ -7,7 +7,15 @@
     padding: 0 var(--gap-global);
 }
 
+
+.main__section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap-global);
+}
+
 .main__section_promo {
+    max-width: none;
     height: 100vh;
-    padding-top: var(--header-height);
+    padding: var(--header-height) 0 0;
 }

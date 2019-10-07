@@ -1,2 +1,113 @@
-@import 'works';
-@import 'works-filter';
+.works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-gap: var(--gap-global);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.works__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    padding: var(--gap-global) 50% var(--gap-global) var(--gap-global);
+    background-color: var(--color-gray-light);
+    border-radius: var(--radius);
+}
+
+.works__title {
+    font-weight: 500;
+}
+.works__link {
+    color: var(--color-black);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.works__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.works__categories {
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 var(--margin-global);
+    padding: 0;
+    list-style: none;
+
+    color: var(--color-gray);
+
+    font-size: var(--font-size-small);
+    font-weight: 400;
+}
+.works__category {
+    margin-right: calc(var(--margin-global) * 2);
+}
+
+.works__address {
+    position: relative;
+    margin-bottom: 0;
+    color: var(--color-gray);
+    font-size: var(--font-size-small);
+}
+.works__chain {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    margin-top: -4px;
+
+    path, polygon {
+        fill: transparent;
+    }
+
+    #chain_center {
+        transition: fill 200ms ease;
+    }
+    #chain_left,
+    #chain_right {
+        transition: fill 200ms ease, transform 200ms ease-out 200ms;
+    }
+    #chain_left {
+        transform: translateX(-8px);
+    }
+    #chain_right {
+        transform: translateX(8px);
+    }
+
+    .works__item:hover & {
+        path, polygon {
+            fill: var(--color-gray);
+        }
+        #chain_center {
+            transition: fill 200ms ease 100ms;
+        }
+        #chain_left,
+        #chain_right {
+            transform: translateX(0);
+            transition: fill 200ms ease 100ms, transform 200ms ease-out 150ms;
+        }
+    }
+}
+.works__address-text {
+    display: inline-block;
+    transition: transform 200ms ease-out 100ms;
+
+    .works__item:hover & {
+        transform: translateX(28px);
+        transition: transform 200ms ease-out;
+    }
+}
