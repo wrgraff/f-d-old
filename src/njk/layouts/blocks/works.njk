@@ -1,33 +1,63 @@
 {% set worksItems = [
     {
-        name: "Sensormatica catalog",
-        img: "sensormatica.png",
+        name: "Sensormatica equipment catalog",
+        img: "sensormatica",
         address: 'sensormatica.ru',
         link: 'https://sensormatica.ru/',
         categories: ['frontend', 'design', 'support']
     },{
         name: "Stockholm School of Economics Russia",
-        img: "sensormatica.png",
+        img: "sse",
         address: 'sserussia.org',
         link: 'https://www.sserussia.org/en/',
         categories: ['frontend', 'design', 'support']
     },{
-        name: "Biteh e-commerce",
-        img: "sensormatica.png",
+        name: "Biteh store of industrial equipment",
+        img: "biteh",
         address: 'bi-teh.ru',
         link: 'https://bi-teh.ru/',
-        categories: ['frontend', 'support']
+        categories: ['frontend', 'design', 'support']
     },{
-        name: "Prointeh catalog",
-        img: "sensormatica.png",
-        address: 'prointech.ru',
-        link: 'https://bi-teh.ru/',
+        name: "BusinesStat Market reviews & business plans store",
+        img: "businesstat",
+        address: 'businesstat.ru',
+        link: 'https://businesstat.ru/',
         categories: ['frontend']
     },{
-        name: "Videomix inform site",
-        img: "sensormatica.png",
-        address: 'videomix.ru',
-        link: 'https://bi-teh.ru/',
+        name: "FLOVER bouquet shop",
+        img: "flover",
+        address: 'floverart.ru',
+        link: 'https://floverart.ru/',
+        categories: ['frontend']
+    },{
+        name: "Smart business lab trainings",
+        img: "sbl",
+        address: 'smartbl.ru',
+        link: 'http://smartbl.ru/',
+        categories: ['frontend']
+    },{
+        name: "United Design studio",
+        img: "ud",
+        address: 'uniteddesign.ru',
+        link: 'https://uniteddesign.ru/',
+        categories: ['frontend', 'design', 'support']
+    },{
+        name: "Construction company Pilbet",
+        img: "pilbet",
+        address: 'pilbet.rf',
+        link: 'http://пилбет.рф/',
+        categories: ['frontend']
+    },{
+        name: "UP-quarters page",
+        img: "up",
+        address: '7035555.ru',
+        link: 'http://7035555.ru/',
+        categories: ['frontend']
+    },{
+        name: "Meandr template page",
+        img: "meandr",
+        address: 'meandr.frontend-design.ru',
+        link: 'http://meandr.frontend-design.ru/',
         categories: ['frontend']
     }
 ] %}
@@ -35,7 +65,15 @@
 {% macro addWorksItem(name, img, address, link, categories) %}
     <li class="works__item">
         <h3 class="works__title"><a class="works__link" href="{{ link }}">{{ name }}</a></h3>
-        <img class="works__img" src="/static/img/works/{{ img }}" alt="{{ name }}" aria-hidden="true">
+
+        <picture class="works__img" aria-hidden="true">
+            <source srcset="/static/img/works/{{ img }}.webp 1x,
+                            /static/img/works/{{ img }}@2x.webp 2x"
+                    type="image/webp" />
+            <img src="/static/img/works/{{ img }}.png"
+                 srcset="/static/img/works/{{ img }}@2x.png 2x"
+                 alt="{{ name }}" />
+        </picture>
 
         <h4 class="visually-hidden">Categories:</h4>
         <ul class="works__categories">
