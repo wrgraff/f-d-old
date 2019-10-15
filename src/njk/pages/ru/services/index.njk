@@ -1,0 +1,37 @@
+{% set lang = 'ru' %}
+{% set title = 'Artur Trifonov: frontend developer' %}
+{% set description = 'Artur Trifonov portfolio site: about, works and contacts' %}
+{% set keywords = 'frontend developer, Artur Trifonov, frontend, design' %}
+
+{% set activePage = 'services' %}
+
+{% extends '../layouts/index.njk' %}
+
+{% block content %}
+	<section class="main__section">
+		<h1 class="main__heading">Услуги</h1>
+
+		<ol>
+			<li>
+				<h2>Верстка</h2>
+				<p>Есть готовый дизайн-макет? Подготовлю к установке на систему</p>
+			</li>
+			<li>
+				<h2>Дизайн + верстка</h2>
+				<p>Использую метод дизайна в браузере, так что верстка будет готова сразу</p>
+			</li>
+			<li>
+				<h2>Внедрение адаптива</h2>
+				<p>Подготовлю сайт к работе на всех мыслимых устройствах</p>
+			</li>
+			<li>
+				<h2>Устранение ошибок</h2>
+				<p>Исправлю ошибки, оптимизирую код, сниму порчу</p>
+			</li>
+			<li>
+				<h2>Оптимизация сайта</h2>
+				<p>Оптимизация под требования инструментов Google</p>
+			</li>
+		</ol>
+	</section>
+{% endblock %}

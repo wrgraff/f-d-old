@@ -1,0 +1,95 @@
+{% set lang = 'ru' %}
+{% set title = 'Artur Trifonov: frontend developer' %}
+{% set description = 'Artur Trifonov portfolio site: about, works and contacts' %}
+{% set keywords = 'frontend developer, Artur Trifonov, frontend, design' %}
+
+{% set activePage = 'index' %}
+
+{% extends '../layouts/index.njk' %}
+
+{% block content %}
+    <section class="main__section main__section_promo promo">
+        <div class="promo__photo">
+            <picture>
+                <source srcset="/static/img/i.webp 1x,
+                                /static/img/i@2x.webp 2x"
+                        type="image/webp" />
+                <img src="/static/img/i.jpg"
+                     srcset="/static/img/i@2x.jpg 2x"
+                     alt="Фото Артура Трифонова" />
+            </picture>
+        </div>
+
+        <div class="promo__text">
+            <h1 class="visually-hidden">Портфолио веб-разработчика Артура Трифонова</h1>
+            <p class="promo__title">Я делаю сайты: адаптив, бэм, vanilla js и a11y.</p>
+
+            <h2 class="visually-hidden">Ссылки на соцсети</h2>
+            <ul class="promo__links social">
+                <li class="social__item">
+                    <a class="social__link" href="https://github.com/wrgraff">GitHub</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.facebook.com/wrgraff">Facebook</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://twitter.com/a_sassafras">Twitter</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://htmlacademy.ru/profile/wrgraff">HTML Academy</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="promo__button">
+            <a class="button" href="#works">
+                <img class="button__img" src="/static/img/ico/arrow_down.svg" alt="Перейти ниже" aria-hidden="true"> Мои работы
+            </a>
+        </div>
+    </section>
+
+    <section class="main__section main__section_works" id="works">
+        <h2 class="main__heading">Мои последние работы</h2>
+        <p class="main__subheading"><a href="/works/">Все работы</a></p>
+        {% include "blocks/works.njk" %}
+    </section>
+
+	<section class="main__section">
+		<h2 class="main__heading">Чем я могу помочь</h2>
+		<p>Разработаю интерфейс с нуля или по готовым дизайн-макетам, подготовлю к установке на CMS или другой интеграции.</p>
+		<p><a href="/ru/services/">Услуги</a></p>
+
+		<ul>
+			<li>
+				<h3>Адаптив</h3>
+				<p>Работа сайта на разрешениях с 0 пикселей до 4000</p>
+			</li>
+			<li>
+				<h3>Доступность</h3>
+				<p>Сайт доступен с клавиатуры, для скринридеров, поисковых роботов и устройств с бородой больше, чем у Деда Мороза</p>
+			</li>
+			<li>
+				<h3>Валидность</h3>
+				<p>Код соответствует современным стандартам и выглядит достойно в любых браузерах</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<h3>SEO-оптимизация</h3>
+				<p>Код хорошо читается роботами, а любой дизайн может быть представлен корректной семантической разметкой</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="main__section">
+		<h2 class="main__heading">Обо мне</h2>
+		<p>10 лет в отрасли</p>
+		<p>С 2009 года занимаюсь веб-дизайном</p>
+		<p>С 2013 года занимаюсь фронтендом</p>
+		<p>Я — разработчик интерфейсов из Санкт-Петербурга. Занимаюсь дизайном и фронтендом: работаю на стыке двух плотно пересекающихся областей.</p>
+		<p>Веб-разработка стала не только моей работой, но и увлечением, а ее безумные темпы развития только подстегивают интерес. Мне важно то, чем я занимаюсь, и я ценю работу с теми, кому не безразлично собственное дело.</p>
+	</section>
+{% endblock %}
