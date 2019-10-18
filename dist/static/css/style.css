@@ -553,6 +553,55 @@ p {
   outline-offset: -2px; }
 
 :root {
+  --field-color: var(--color-gray-light); }
+
+::placeholder {
+  color: var(--color-gray); }
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.field:hover {
+  --field-color: var(--color-blue); }
+
+.field__title {
+  order: -1;
+  margin-bottom: var(--margin-global);
+  padding: 0 calc(var(--margin-global) * 4);
+  color: var(--color-black);
+  font-weight: 400;
+  transition: color 250ms; }
+
+.field__helper {
+  position: relative;
+  margin: 0;
+  padding: var(--margin-global) calc(var(--margin-global) * 4);
+  color: var(--color-gray);
+  font-size: var(--font-size-small);
+  line-height: 1;
+  transition: opacity 250ms, transform 250ms; }
+
+.field__input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: calc(var(--margin-global) * 3) calc(var(--margin-global) * 4);
+  background-color: var(--field-color);
+  border: none;
+  border-radius: 40px;
+  line-height: 1;
+  transition: background-color 250ms, box-shadow 250ms; }
+  .field__input:hover {
+    transform: scale(1.07); }
+  .field__input:focus {
+    border-color: rgba(var(--field-border-color), 1);
+    box-shadow: shadow(1-lvl, rgba(var(--field-border-color), 0.75)); }
+  .field__input:invalid:not(:hover):not(:focus) {
+    box-shadow: none; }
+
+:root {
   --page-layout-aside-width: 220px; }
   @media screen and (min-width: 960px) {
     :root {
