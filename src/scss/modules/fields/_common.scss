@@ -1,5 +1,6 @@
 :root {
 	--field-color: var(--color-gray-light);
+	--field-border-color: var(--color-gray-light);
 }
 
 ::placeholder {
@@ -12,11 +13,12 @@
     flex-direction: column;
 }
 .field:hover {
-	--field-color: var(--color-blue);
+	--field-color: #eaeaea;
+	--field-border-color: #eaeaea;
 }
-// .field:focus-within {
-// 	--field-border-color: #{getRGB($field-color-active)};
-// }
+.field:focus-within {
+	--field-border-color: var(--color-blue);
+}
 // .field_valid,
 // .field_valid:focus-within {
 // 	--field-border-color: #{getRGB($field-color-valid)};
@@ -29,7 +31,7 @@
 .field__title {
     order: -1;
     margin-bottom: var(--margin-global);
-    padding: 0 calc(var(--margin-global) * 4);
+    padding: 0 2px;
     color: var(--color-black);
 	font-weight: 400;
     transition: color 250ms;
@@ -38,7 +40,7 @@
 .field__helper {
 	position: relative;
     margin: 0;
-    padding: var(--margin-global) calc(var(--margin-global) * 4);
+    padding: var(--margin-global) 2px;
     color: var(--color-gray);
     font-size: var(--font-size-small);
     line-height: 1;

@@ -1,5 +1,6 @@
 :root {
-    --button-padding: 1.2rem 2rem;
+    --button-padding: 20px 32px;
+    --button-font-size: inherit;
 }
 
 .button {
@@ -12,7 +13,7 @@
     color: var(--color-white);
     background-color: var(--color-blue);
 
-    font-size: inherit;
+    font-size: var(--button-font-size);
     font-weight: font-weight(medium);
     line-height: 1;
     text-transform: lowercase;

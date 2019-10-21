@@ -1,0 +1,15 @@
+$buttons-sizes: (
+    large: (
+        font-size: 24px,
+        padding: 22px 40px,
+    ),
+);
+
+.button_size {
+    @each $name, $sizes-props in $buttons-sizes {
+        &_#{$name} {
+		    --button-padding: #{map-get($sizes-props, padding)};
+		    --button-font-size: #{map-get($sizes-props, font-size)};
+        }
+    }
+}

@@ -2,25 +2,16 @@
 	position: relative;
 	z-index: 2;
     width: 100%;
-    padding: calc(var(--margin-global) * 3) calc(var(--margin-global) * 4);
+    padding: calc(var(--margin-global) * 3);
     background-color: var(--field-color);
-	border: none;
-    border-radius: 40px;
+	border: 2px solid var(--field-border-color);
+    border-radius: 2px;
     line-height: 1;
-    transition: background-color 250ms, box-shadow 250ms;
+    transition: background-color 250ms, border-color 250ms;
 
-    &:hover {
-		transform: scale(1.07);
+    &:invalid {
+        box-shadow: none;
     }
-    &:focus {
-		border-color: rgba(var(--field-border-color), 1);
-		box-shadow: shadow(1-lvl, rgba(var(--field-border-color), .75));
-
-
-    }
-	    &:invalid:not(:hover):not(:focus) {
-	        box-shadow: none;
-	    }
 }
 
 // .field__input_type_email {

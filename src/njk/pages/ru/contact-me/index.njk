@@ -8,15 +8,31 @@
 {% extends '../layouts/index.njk' %}
 
 {% block content %}
-    <section class="main__section">
+    <section class="main__section main__section_form">
         <h1 class="main__heading">Написать мне</h1>
 
         <form class="form" action="contact-me/result/" method="post">
-			<label class="field">
-				<input type="text" name="" value="" required class="field__input" placeholder="Иван Царевич" />
+			<label class="field form__item">
+				<input type="text" name="name" required class="field__input" placeholder="Иван Царевич" />
 				<p class="field__title">Пожалуйста, представьтесь</p>
 				<p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
 			</label>
+
+			<label class="field form__item">
+				<input type="email" name="email" required class="field__input" placeholder="example@domain.ru" />
+				<p class="field__title">Электронный адрес</p>
+				<p class="field__helper">Укажите действующий адрес, чтобы я смог ответить</p>
+			</label>
+
+			<label class="field form__item">
+				<textarea name="text" rows="8" class="field__input" placeholder="Хочу обсудить проект... / Есть задача... / Нужна помощь, есть проблема..."></textarea>
+				<p class="field__title">Пожалуйста, представьтесь</p>
+				<p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
+			</label>
+
+			<div class="form__footer">
+				<button type="submit" class="button button_size_large">Отправить</button>
+			</div>
         </form>
     </section>
 {% endblock %}
