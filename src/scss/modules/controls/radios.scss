@@ -1,0 +1,105 @@
+$radio-size: 20px;
+$radio-size-inner: 10px;
+
+.radios:focus-within {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: rgba(color(primary), .2);
+    outline-offset: $bit * 2;
+}
+
+.radio {
+    display: block;
+    color: color(dark-gray);
+    transition: color 250ms;
+
+    &:hover {
+        color: color(black);
+    }
+
+    &:focus {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(color(primary), .2);
+        outline-offset: $bit;
+    }
+}
+
+.radio__input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.radio__text {
+    position: relative;
+    display: flex;
+    padding-left: $radio-size + ($bit * 1.5);
+
+    &::before,
+	&::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        display: block;
+        width: $radio-size;
+        height: $radio-size;
+	}
+    &::before {
+		background-color: color(white);
+        border: 2px solid color(dark-gray);
+        border-radius: 50%;
+        transition: background-color 250ms, border-color 250ms;
+    }
+    &::after {
+		width: $radio-size-inner;
+		height: $radio-size-inner;
+		margin: ($radio-size - $radio-size-inner) / 2;
+		background-color: color(white);
+        border-radius: 50%;
+    }
+
+    .radio:hover & {
+        &::before {
+            border-color: color(black);
+        }
+    }
+    .radio__input:focus + & {
+        &::before {
+            outline-width: 2px;
+            outline-style: solid;
+            outline-color: rgba(color(primary), .2);
+            outline-offset: $bit;
+        }
+    }
+    .radio__input:checked + & {
+        &::before {
+            background-color: color(primary);
+            border-color: transparent;
+        }
+    }
+    .radio__input:checked:hover + & {
+        &::before {
+            background-color: lighten(color(primary), 15%);
+        }
+    }
+    .radio__input:disabled + & {
+		opacity: .3;
+	}
+}
+.radio__helper {
+    order: 3;
+    display: inline-block;
+    padding: $bit / 2;
+    padding-left: $radio-size + ($bit * 1.5);
+    color: color(medium-gray);
+    font-size: font-size(small);
+    line-height: 1;
+
+    .input__field_status_invalid ~ & {
+        opacity: 0;
+    }
+}

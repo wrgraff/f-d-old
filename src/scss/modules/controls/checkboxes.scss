@@ -1,0 +1,94 @@
+$checkbox-size: 20px;
+
+.checkbox {
+    display: block;
+    color: var(--color-gray-dark);
+    transition: color 250ms;
+
+    &:hover {
+        color: var(--color-black);
+    }
+
+    &:focus {
+	    outline-width: 2px;
+	    outline-style: solid;
+	    outline-color: var(--color-blue-light);
+	    outline-offset: var(--margin-global);
+    }
+}
+
+.checkbox__input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.checkbox__text {
+    position: relative;
+    display: flex;
+    padding-left: calc(var(--margin-global) * 1.5 + #{$checkbox-size});
+	font-weight: normal;
+
+    &::before,
+	&::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        display: block;
+        width: $checkbox-size;
+        height: $checkbox-size;
+	}
+    &::before {
+		background-color: var(--color-white);
+        border: 2px solid var(--color-gray-dark);
+        border-radius: 2px;
+        transition: background-color 250ms, border-color 250ms;
+    }
+    &::after {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-image: url(../img/ico/check.svg);
+        transition: opacity 250ms;
+    }
+
+    .checkbox:hover & {
+        &::before {
+            border-color: var(--color-black);
+        }
+    }
+    .checkbox__input:focus + & {
+        &::before {
+		    outline-width: 2px;
+		    outline-style: solid;
+		    outline-color: var(--color-blue-light);
+		    outline-offset: var(--margin-global);
+        }
+    }
+    .checkbox__input:checked + & {
+        &::before {
+            background-color: var(--color-blue);
+            border-color: transparent;
+        }
+    }
+    .checkbox__input:checked:hover + & {
+        &::before {
+            // background-color: lighten(var(--color-blue), 15%);
+        }
+    }
+    .checkbox__input:disabled + & {
+		opacity: .3;
+	}
+}
+
+.checkbox__helper {
+    order: 3;
+    display: inline-block;
+    padding: var(--margin-global);
+    padding-left: calc(var(--margin-global) * 1.5 + #{$checkbox-size});
+    color: var(--color-gray);
+    font-size: var(--font-size-small);
+    line-height: 1.3;
+}

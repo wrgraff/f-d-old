@@ -4,6 +4,11 @@ $button-colors: (
         bg-hover: var(--color-gray-light),
         color: var(--color-black),
     ),
+    gray: (
+        bg: var(--color-gray-light),
+        bg-hover: #e6e6e6,
+        color: var(--color-black),
+    ),
 );
 
 .button_color {

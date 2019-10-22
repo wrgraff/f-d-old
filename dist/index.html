@@ -460,11 +460,54 @@
                     </li>
                 </ul>
 
-                <a class="button button_color_white button_expanded" href="/contact-me/">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
+                <a class="button button_color_white button_expanded" href="/contact-me/" data-modal="contact-me">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
             </footer>
         </aside>
     </div>
 
+    <div class="modal" id="contact-me" aria-hidden="true">
+        <section class="modal__overlay" tabindex="-1">
+            <div class="modal__overlay-close" data-modal-close></div>
+            <form action="/contact-me/result/" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
+                <header class="modal__header">
+                    <h2 class="modal__title" id="testContentTitle">Написать мне</h2>
+                </header>
+
+                <div class="modal__body">
+                    <label class="field form__item">
+                        <input type="text" name="name" required class="field__input" placeholder="Иван Царевич" />
+                        <p class="field__title">Пожалуйста, представьтесь</p>
+                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
+                    </label>
+
+                    <label class="field form__item">
+                        <input type="email" name="email" required class="field__input" placeholder="example@domain.ru" />
+                        <p class="field__title">Электронный адрес</p>
+                        <p class="field__helper">Укажите действующий адрес, чтобы я смог ответить</p>
+                    </label>
+
+                    <label class="field form__item">
+                        <textarea name="text" rows="8" class="field__input" placeholder="Хочу обсудить проект... / Есть задача... / Нужна помощь, есть проблема..."></textarea>
+                        <p class="field__title">Пожалуйста, представьтесь</p>
+                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
+                    </label>
+
+                    <label class="checkbox form__item">
+                        <input type="checkbox" name="agree" class="checkbox__input" required checked />
+                        <span class="checkbox__text">Я соглашаюсь на обработку персональных данных</span>
+                        <span class="checkbox__helper">Нажимая на кнопку &laquo;отправить&raquo;, вы даете согласие на обработку персональных данных и&nbsp;соглашаетесь c политикой конфиденциальности</span>
+                    </label>
+                </div>
+
+                <footer class="modal__footer form__footer">
+                    <button type="button" class="button button_size_large button_color_gray" data-modal-close>Отменить</button>
+                    <button type="submit" class="button button_size_large">Отправить</button>
+                </footer>
+
+                <button type="button" class="modal__close" data-modal-close></button>
+            </form>
+        </section>
+    </div>
     <script src="/static/js/app.js"></script>
 </body>
 
