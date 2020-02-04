@@ -1,33 +1,29 @@
 .services {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: $bit * 3;
+	padding-top: 32px;
+}
+
+.services__list {
     margin: 0;
+	&:not(:last-child) {
+	    margin-bottom: 32px;
+	}
     padding: 0;
     list-style: none;
 }
+
 .services__item {
-    padding-left: $bit * 4;
-    font-weight: 300;
-    counter-increment: service-item;
+	&:not(:last-child) {
+	    margin-bottom: 32px;
+	}
+}
 
-    h5 {
-        position: relative;
-        margin-bottom: $bit;
-        color: map-get($colors, frontend);
-        font-weight: inherit;
+.services__heading {
+    position: relative;
 
-        &:before {
-            content: '0' counter(service-item);
-            position: absolute;
-            right: 100%;
-            margin-right: $bit;
-            color: map-get($colors, gray);
-            font-weight: 700;
-        }
-    }
-    p {
-        color: map-get($colors, gray);
-        font-size: rem-calc(16);
-    }
+    margin-bottom: 8px;
+
+	font-size: 24px;
+}
+
+.services__text {
 }

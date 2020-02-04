@@ -1,0 +1,146 @@
+.page-header {
+	background-color: $color-primary;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+	.page-header_fixed {
+		height: 64px;
+	}
+}
+
+.page-header__controls {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px;
+
+	background-color: $color-primary;
+}
+@media screen and (max-width: $breakpoint-medium) {
+	.page-header__controls_fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 5;
+	}
+}
+
+.page-header__logo {
+	margin: 0 36px;
+}
+
+.page-header__menu-button {
+	position: relative;
+
+	flex-shrink: 0;
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	background-color: transparent;
+	border: none;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 16px;
+		left: 6px;
+
+		display: block;
+		width: 36px;
+		height: 3px;
+
+		background-color: var(--color-white);
+	}
+	&::after {
+		top: 28px;
+	}
+
+	@media screen and (min-width: $breakpoint-medium) {
+		display: none;
+	}
+}
+.page-header__menu-button_hidden {
+	display: none;
+}
+
+.page-header__contact-button {
+	position: relative;
+
+	flex-shrink: 0;
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	background-color: transparent;
+	border: none;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 6px;
+
+		display: block;
+		width: 36px;
+		height: 24px;
+
+		border: 3px solid var(--color-white);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 12px;
+		left: 6px;
+
+		display: block;
+
+		border-style: solid;
+		border-width: 12px 18px;
+		border-color: var(--color-white) transparent transparent;
+	}
+
+	@media screen and (min-width: $breakpoint-medium) {
+		display: none;
+	}
+}
+.page-header__contact-button_hidden {
+	display: none;
+}
+
+.page-header__nav {
+	padding-top: 16px;
+	background-color: $color-primary;
+	text-align: center;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+	.page-header__nav_closed {
+		display: none;
+	}
+	.page-header__nav_opened {
+		position: fixed;
+		top: 64px;
+		left: 0;
+		right: 0;
+		z-index: 5;
+
+		display: block;
+	}
+}
+
+.page-header__menu {
+	margin-bottom: 16px;
+}
+
+.page-header__contacts {
+	padding: 16px;
+
+	text-align: center;
+}
+
+.page-header__social {
+	margin-bottom: 24px;
+}

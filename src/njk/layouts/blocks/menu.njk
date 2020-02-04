@@ -17,10 +17,8 @@
     </li>
 {% endmacro %}
 
-<nav class="aside__nav">
-    <ul class="menu">
-        {% for item in menuItems %}
-            {{ addMenuItem(item.name, item.address) }}
-        {% endfor %}
-    </ul>
-</nav>
+<ul class="page-header__menu menu">
+    {% for item in menuItems %}
+        {{ addMenuItem(item.name, item.address) }}
+    {% endfor %}
+</ul>

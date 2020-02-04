@@ -12,12 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "gulp-html-prettify": "0.0.1",
     "gulp-imagemin": "^6.1.0",
-    "gulp-include": "^2.4.1",
     "gulp-jshint": "^2.1.0",
-    "gulp-livereload": "^4.0.1",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
@@ -31,5 +28,16 @@
   "bugs": {
     "url": "https://github.com/wrgraff/f-d/issues"
   },
-  "homepage": "https://github.com/wrgraff/f-d#readme"
+  "homepage": "https://github.com/wrgraff/f-d#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clone": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-include": "^2.4.1",
+    "gulp-prettier": "^2.3.0",
+    "gulp-rename": "^1.4.0"
+  }
 }

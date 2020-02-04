@@ -6,6 +6,69 @@
 
 <body>
     <div class="page-layout">
+		<header class="page-layout__header page-header">
+			<div class="page-header__controls">
+				<button class="page-header__menu-button page-header__menu-button_hidden">
+					<span class="visually-hidden">
+						{% if lang == 'en' %}
+							Menu
+						{% else %}
+							Меню
+						{% endif %}
+					</span>
+				</button>
+
+				<a href="/" class="page-header__logo logo" aria-label="frontend-design">
+					<span class="logo__f">f</span>
+					<span class="logo__line"></span>
+					<span class="logo__d">d</span>
+				</a>
+
+				<a class="page-header__contact-button page-header__contact-button_hidden" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+					<span class="visually-hidden">
+						{% if lang == 'en' %}
+							Contact me
+						{% else %}
+							Написать мне
+						{% endif %}
+					</span>
+				</a>
+			</div>
+
+			<nav class="page-header__nav">
+				{% include "blocks/menu.njk" %}
+
+				<div class="page-header__contacts">
+					<ul class="page-header__social social social_header social_light">
+						<li class="social__item">
+							<a class="social__link" href="#">gh</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" href="#">li</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" href="#">fb</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" href="#">tw</a>
+						</li>
+						<li class="social__item">
+							<a class="social__link" href="#">ha</a>
+						</li>
+					</ul>
+
+					<a class="button button_color_white" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+						{% if lang == 'en' %}
+							Contact me
+						{% else %}
+							Написать мне
+						{% endif %}
+						<img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="{{ 'Contact me' if (lang == 'en') }}{{ 'Написать мне' if (lang == 'ru') }}" aria-hidden="true">
+					</a>
+				</div>
+			</nav>
+		</header>
+
         <main class="page-layout__main main">
             <div class="main__header">
                 <a href="/" class="name">Artur Trifonov</a>
@@ -13,43 +76,9 @@
             {% block content %}
             {% endblock %}
         </main>
-
-        <aside class="page-layout__aside aside">
-            <header class="aside__header">
-                <a href="/" class="logo" aria-label="frontend-design">
-                    <span class="logo__f">f</span>
-                    <span class="logo__line"></span>
-                    <span class="logo__d">d</span>
-                </a>
-            </header>
-
-            {% include "blocks/menu.njk" %}
-
-            <footer class="aside__footer">
-                <ul class="aside__social social social_aside social_light">
-                    <li class="social__item">
-                        <a class="social__link" href="#">gh</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">li</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">fb</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">tw</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">ha</a>
-                    </li>
-                </ul>
-
-                <a class="button button_color_white button_expanded" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
-            </footer>
-        </aside>
     </div>
 
-	<div class="modal" id="contact-me" aria-hidden="true">
+	{# <div class="modal" id="contact-me" aria-hidden="true">
         <section class="modal__overlay" tabindex="-1">
 			<div class="modal__overlay-close" data-modal-close></div>
             <form action="/contact-me/result/" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
@@ -91,7 +120,7 @@
 				<button type="button" class="modal__close" data-modal-close></button>
             </form>
         </section>
-    </div>
-    {# <script src="/static/js/app.js"></script> #}
+    </div> #}
+    <script src="/static/js/app.js"></script>
 </body>
 </html>

@@ -1,12 +1,18 @@
 :root {
-    --color-red: #FF6060;
-    --color-red-light: #{lighten(#FF6060, 20%)};
-    --color-blue: #5040FF;
-    --color-blue-light: #{lighten(#5040FF, 32%)};
-    --color-blue-dark: #{darken(#5040FF, 5%)};
-    --color-black: #000;
-    --color-gray: #757575;
-    --color-gray-light: #f5f5f5;
-    --color-gray-dark: #222;
-    --color-white: #fff;
+    --color-primary-hue: 245;
+    --color-primary-saturation: 100%;
+    --color-primary-lightness: 60%;
+
+    --color-secondary-hue: 0;
+    --color-secondary-saturation: 100%;
+    --color-secondary-lightness: 70%;
+
+    --color-black: hsl(0, 0%, 0%);
+    --color-gray-dark: hsl(0, 0%, 13%);
+    --color-gray: hsl(0, 0%, 46%);
+    --color-gray-light: hsl(0, 0%, 96%);
+    --color-white: hsl(0, 0%, 100%);
 }
+
+$color-primary: hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness));
+$color-secondary: hsl(var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness));

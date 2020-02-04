@@ -6,22 +6,26 @@
 <meta name="description" content="{{description}}" />
 <meta name="keywords" content="{{keywords}}" />
 
-<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/style.min.css">
 <link rel="icon" href="/static/img/favicons/favicon.ico">
 <link rel="icon" href="/static/img/favicons/base-16x16.png" sizes="16x16">
 <link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32">
 <link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32">
 <link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400|Ubuntu:300&display=swap{{ '&subset=cyrillic' if (lang == 'ru') }}" rel="stylesheet">
+
+<link rel="preload" href="/static/fonts/gotham-latin.woff2" as="font" type="font/woff2" crossorigin>
+{% if lang == 'ru' %}
+	<link rel="preload" href="/static/fonts/gotham-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+{% endif %}
 
 <!-- MS -->
-<meta name="application-name" content="Site name">
+<meta name="application-name" content="frontend—design">
 <meta name="msapplication-TileImage" content="/static/img/favicons/tile.jpg">
 <meta name="msapplication-config" content="/browserconfig.xml">
 <!-- OS X -->
 <link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#6961bf">
 <!-- iOS -->
-<meta name="apple-mobile-web-app-title" content="Site name">
+<meta name="apple-mobile-web-app-title" content="frontend—design">
 <link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
@@ -29,10 +33,10 @@
 <link rel="manifest" href="/manifest.json">
 
 <!-- og -->
-<meta property="og:title" content="get from H1" />
-<meta property="og:description" content="get from meta description" />
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{description}}" />
 <meta property="og:image" content="/static/img/favicons/og.png" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Site name" />
-<meta property="og:url" content="https://www.site.ru/" />
+<meta property="og:site_name" content="frontend—design" />
+<meta property="og:url" content="https://frontend-design.ru/" />
 <meta property="og:locale" content="ru_RU" />

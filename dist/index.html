@@ -1,514 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Artur Trifonov: frontend developer | f—d</title>
-    <meta name="description" content="Artur Trifonov portfolio site: about, works and contacts" />
-    <meta name="keywords" content="frontend developer, Artur Trifonov, frontend, design" />
-
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" href="/static/img/favicons/favicon.ico">
-    <link rel="icon" href="/static/img/favicons/base-16x16.png" sizes="16x16">
-    <link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32">
-    <link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32">
-    <link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400|Ubuntu:300&display=swap" rel="stylesheet">
-
-    <!-- MS -->
-    <meta name="application-name" content="Site name">
-    <meta name="msapplication-TileImage" content="/static/img/favicons/tile.jpg">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <!-- OS X -->
-    <link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#6961bf">
-    <!-- iOS -->
-    <meta name="apple-mobile-web-app-title" content="Site name">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
-    <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- og -->
-    <meta property="og:title" content="get from H1" />
-    <meta property="og:description" content="get from meta description" />
-    <meta property="og:image" content="/static/img/favicons/og.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Site name" />
-    <meta property="og:url" content="https://www.site.ru/" />
-    <meta property="og:locale" content="ru_RU" />
-
-</head>
-
-<body>
-    <div class="page-layout">
-        <main class="page-layout__main main">
-            <div class="main__header">
-                <a href="/" class="name">Artur Trifonov</a>
-            </div>
-
-            <section class="main__section main__section_promo promo">
-                <div class="promo__photo">
-                    <picture>
-                        <source srcset="/static/img/i.webp 1x,
-                                /static/img/i@2x.webp 2x" type="image/webp" />
-                        <img src="/static/img/i.jpg" srcset="/static/img/i@2x.jpg 2x" alt="Фото Артура Трифонова" />
-                    </picture>
-                </div>
-
-                <div class="promo__text">
-                    <h1 class="visually-hidden">Artur Trifonov's web developer portfolio</h1>
-                    <p class="promo__title">I develop sites: adaptive, bem, vanilla js and a11y.</p>
-
-                    <h2 class="visually-hidden">Social network links</h2>
-                    <ul class="promo__links social">
-                        <li class="social__item">
-                            <a class="social__link" href="https://github.com/wrgraff">GitHub</a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link" href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link" href="https://www.facebook.com/wrgraff">Facebook</a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link" href="https://twitter.com/a_sassafras">Twitter</a>
-                        </li>
-                        <li class="social__item">
-                            <a class="social__link" href="https://htmlacademy.ru/profile/wrgraff">HTML Academy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="promo__button">
-                    <a class="button" href="#works">
-                        <img class="button__img" src="/static/img/ico/arrow_down.svg" alt="Перейти ниже" aria-hidden="true">My works
-                    </a>
-                </div>
-            </section>
-
-            <section class="main__section main__section_works" id="works">
-                <h2 class="main__heading">My last works</h2>
-                <p class="main__subheading"><a href="/works/">All works</a>
-                </p>
-
-
-
-
-                <ul class="works">
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://sensormatica.ru/">Sensormatica equipment catalog</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/sensormatica.webp 1x,
-                            /static/img/works/sensormatica@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/sensormatica.png" srcset="/static/img/works/sensormatica@2x.png 2x" alt="Sensormatica equipment catalog" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                            <li class="works__category works__category_design">design</li>
-
-                            <li class="works__category works__category_support">support</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">sensormatica.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://www.sserussia.org/en/">Stockholm School of Economics Russia</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/sse.webp 1x,
-                            /static/img/works/sse@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/sse.png" srcset="/static/img/works/sse@2x.png 2x" alt="Stockholm School of Economics Russia" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                            <li class="works__category works__category_design">design</li>
-
-                            <li class="works__category works__category_support">support</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">sserussia.org</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://bi-teh.ru/">Biteh store of industrial equipment</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/biteh.webp 1x,
-                            /static/img/works/biteh@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/biteh.png" srcset="/static/img/works/biteh@2x.png 2x" alt="Biteh store of industrial equipment" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                            <li class="works__category works__category_design">design</li>
-
-                            <li class="works__category works__category_support">support</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">bi-teh.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://businesstat.ru/">BusinesStat Market reviews &amp; business plans store</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/businesstat.webp 1x,
-                            /static/img/works/businesstat@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/businesstat.png" srcset="/static/img/works/businesstat@2x.png 2x" alt="BusinesStat Market reviews &amp; business plans store" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">businesstat.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://floverart.ru/">FLOVER bouquet shop</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/flover.webp 1x,
-                            /static/img/works/flover@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/flover.png" srcset="/static/img/works/flover@2x.png 2x" alt="FLOVER bouquet shop" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">floverart.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="http://smartbl.ru/">Smart business lab trainings</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/sbl.webp 1x,
-                            /static/img/works/sbl@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/sbl.png" srcset="/static/img/works/sbl@2x.png 2x" alt="Smart business lab trainings" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">smartbl.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="https://uniteddesign.ru/">United Design studio</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/ud.webp 1x,
-                            /static/img/works/ud@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/ud.png" srcset="/static/img/works/ud@2x.png 2x" alt="United Design studio" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                            <li class="works__category works__category_design">design</li>
-
-                            <li class="works__category works__category_support">support</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">uniteddesign.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="http://пилбет.рф/">Construction company Pilbet</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/pilbet.webp 1x,
-                            /static/img/works/pilbet@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/pilbet.png" srcset="/static/img/works/pilbet@2x.png 2x" alt="Construction company Pilbet" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">pilbet.rf</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="http://7035555.ru/">UP-quarters page</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/up.webp 1x,
-                            /static/img/works/up@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/up.png" srcset="/static/img/works/up@2x.png 2x" alt="UP-quarters page" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">7035555.ru</span>
-                        </p>
-                    </li>
-
-
-
-                    <li class="works__item">
-                        <h3 class="works__title"><a class="works__link" href="http://meandr.frontend-design.ru/">Meandr template page</a></h3>
-
-                        <picture class="works__img" aria-hidden="true">
-                            <source srcset="/static/img/works/meandr.webp 1x,
-                            /static/img/works/meandr@2x.webp 2x" type="image/webp" />
-                            <img src="/static/img/works/meandr.png" srcset="/static/img/works/meandr@2x.png 2x" alt="Meandr template page" />
-                        </picture>
-
-                        <h4 class="visually-hidden">Categories:</h4>
-                        <ul class="works__categories">
-
-                            <li class="works__category works__category_frontend">frontend</li>
-
-                        </ul>
-                        <p class="works__address">
-                            <svg width="40" height="10" class="works__chain">
-                                <path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
-                                <path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
-                                <polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
-                            </svg>
-
-                            <span class="works__address-text">meandr.frontend-design.ru</span>
-                        </p>
-                    </li>
-
-
-                </ul>
-
-
-            </section>
-
-        </main>
-
-        <aside class="page-layout__aside aside">
-            <header class="aside__header">
-                <a href="/" class="logo" aria-label="frontend-design">
-                    <span class="logo__f">f</span>
-                    <span class="logo__line"></span>
-                    <span class="logo__d">d</span>
-                </a>
-            </header>
-
-
-
-
-
-            <nav class="aside__nav">
-                <ul class="menu">
-
-
-                    <li class="menu__item">
-                        <a href="/works/" class="menu__link">Works</a>
-                    </li>
-
-
-
-                    <li class="menu__item">
-                        <a href="/about/" class="menu__link">About</a>
-                    </li>
-
-
-
-                    <li class="menu__item">
-                        <a href="/contacts/" class="menu__link">Contacts</a>
-                    </li>
-
-
-                </ul>
-            </nav>
-
-
-            <footer class="aside__footer">
-                <ul class="aside__social social social_aside social_light">
-                    <li class="social__item">
-                        <a class="social__link" href="#">gh</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">li</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">fb</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">tw</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">ha</a>
-                    </li>
-                </ul>
-
-                <a class="button button_color_white button_expanded" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
-            </footer>
-        </aside>
-    </div>
-
-    <div class="modal" id="contact-me" aria-hidden="true">
-        <section class="modal__overlay" tabindex="-1">
-            <div class="modal__overlay-close" data-modal-close></div>
-            <form action="/contact-me/result/" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="testContentTitle">Написать мне</h2>
-                </header>
-
-                <div class="modal__body">
-                    <label class="field form__item">
-                        <input type="text" name="name" required class="field__input" placeholder="Иван Царевич" />
-                        <p class="field__title">Пожалуйста, представьтесь</p>
-                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
-                    </label>
-
-                    <label class="field form__item">
-                        <input type="email" name="email" required class="field__input" placeholder="example@domain.ru" />
-                        <p class="field__title">Электронный адрес</p>
-                        <p class="field__helper">Укажите действующий адрес, чтобы я смог ответить</p>
-                    </label>
-
-                    <label class="field form__item">
-                        <textarea name="text" rows="8" class="field__input" placeholder="Хочу обсудить проект... / Есть задача... / Нужна помощь, есть проблема..."></textarea>
-                        <p class="field__title">Пожалуйста, представьтесь</p>
-                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
-                    </label>
-
-                    <label class="checkbox form__item">
-                        <input type="checkbox" name="agree" class="checkbox__input" required checked />
-                        <span class="checkbox__text">Я соглашаюсь на обработку персональных данных</span>
-                        <span class="checkbox__helper">Нажимая на кнопку &laquo;отправить&raquo;, вы даете согласие на обработку персональных данных и&nbsp;соглашаетесь c политикой конфиденциальности</span>
-                    </label>
-                </div>
-
-                <footer class="modal__footer form__footer">
-                    <button type="button" class="button button_size_large button_color_gray" data-modal-close>Отменить</button>
-                    <button type="submit" class="button button_size_large">Отправить</button>
-                </footer>
-
-                <button type="button" class="modal__close" data-modal-close></button>
-            </form>
-        </section>
-    </div>
-
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Artur Trifonov: frontend developer | f—d</title>
+		<meta name="description" content="Artur Trifonov portfolio site: about, works and contacts" />
+		<meta name="keywords" content="frontend developer, Artur Trifonov, frontend, design" />
+
+		<link rel="stylesheet" href="/static/css/style.min.css" />
+		<link rel="icon" href="/static/img/favicons/favicon.ico" />
+		<link rel="icon" href="/static/img/favicons/base-16x16.png" sizes="16x16" />
+		<link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32" />
+		<link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32" />
+		<link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64" />
+
+		<link rel="preload" href="/static/fonts/gotham-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+		<!-- MS -->
+		<meta name="application-name" content="frontend—design" />
+		<meta name="msapplication-TileImage" content="/static/img/favicons/tile.jpg" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+		<!-- OS X -->
+		<link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#6961bf" />
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-title" content="frontend—design" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png" />
+		<!-- Manifest -->
+		<link rel="manifest" href="/manifest.json" />
+
+		<!-- og -->
+		<meta property="og:title" content="Artur Trifonov: frontend developer" />
+		<meta property="og:description" content="Artur Trifonov portfolio site: about, works and contacts" />
+		<meta property="og:image" content="/static/img/favicons/og.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="frontend—design" />
+		<meta property="og:url" content="https://frontend-design.ru/" />
+		<meta property="og:locale" content="ru_RU" />
+	</head>
+
+	<body>
+		<div class="page-layout">
+			<header class="page-layout__header page-header">
+				<div class="page-header__controls">
+					<button class="page-header__menu-button page-header__menu-button_hidden">
+						<span class="visually-hidden">
+							Menu
+						</span>
+					</button>
+
+					<a href="/" class="page-header__logo logo" aria-label="frontend-design">
+						<span class="logo__f">f</span>
+						<span class="logo__line"></span>
+						<span class="logo__d">d</span>
+					</a>
+
+					<a class="page-header__contact-button page-header__contact-button_hidden" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+						<span class="visually-hidden">
+							Contact me
+						</span>
+					</a>
+				</div>
+
+				<nav class="page-header__nav">
+					<ul class="page-header__menu menu">
+						<li class="menu__item">
+							<a href="/works/" class="menu__link">Works</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="/about/" class="menu__link">About</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="/contacts/" class="menu__link">Contacts</a>
+						</li>
+					</ul>
+
+					<div class="page-header__contacts">
+						<ul class="page-header__social social social_header social_light">
+							<li class="social__item">
+								<a class="social__link" href="#">gh</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">li</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">fb</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">tw</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">ha</a>
+							</li>
+						</ul>
+
+						<a class="button button_color_white" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+							Contact me
+
+							<img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true" />
+						</a>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page-layout__main main">
+				<div class="main__header">
+					<a href="/" class="name">Artur Trifonov</a>
+				</div>
+
+				<section class="main__section main__section_promo promo">
+					<div class="promo__photo">
+						<picture>
+							<source srcset="/static/img/i-square.webp 1x, /static/img/i-square@2x.webp 2x" media="(max-width: 600px)" type="image/webp" />
+							<source srcset="/static/img/i.webp 1x, /static/img/i@2x.webp 2x" type="image/webp" />
+							<img src="/static/img/i.jpg" srcset="/static/img/i@2x.jpg 2x" alt="Фото Артура Трифонова" />
+						</picture>
+					</div>
+
+					<div class="promo__text">
+						<h1 class="visually-hidden">Artur Trifonov's web developer portfolio</h1>
+						<p class="promo__title">I develop sites: adaptive, bem, vanilla js and a11y.</p>
+
+						<h2 class="visually-hidden">Social network links</h2>
+						<ul class="promo__links social">
+							<li class="social__item">
+								<a class="social__link" href="https://github.com/wrgraff">GitHub</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="https://linkedin.com/in/arturtrifonov">LinkedIn</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="https://www.facebook.com/wrgraff">Facebook</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="https://twitter.com/a_sassafras">Twitter</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="https://htmlacademy.ru/profile/wrgraff">HTML Academy</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="promo__button">
+						<a class="button" href="#works"> <img class="button__img" src="/static/img/ico/arrow_down.svg" alt="Перейти ниже" aria-hidden="true" /> My works </a>
+					</div>
+				</section>
+
+				<section class="main__section main__section_works" id="works">
+					<h2 class="main__heading">My last works</h2>
+					<p class="main__subheading"><a href="/works/">All works</a></p>
+
+					<ul class="works">
+						<li class="works__item">
+							<h3 class="works__title"><a class="works__link" href="https://sensormatica.ru/">Sensormatica equipment catalog</a></h3>
+
+							<div class="works__img">
+								<picture>
+									<source srcset="/static/img/works/sensormatica.webp 1x, /static/img/works/sensormatica@2x.webp 2x" type="image/webp" />
+									<img src="/static/img/works/sensormatica.png" srcset="/static/img/works/sensormatica@2x.png 2x" alt="Sensormatica equipment catalog,Каталог оборудования Сенсорматики" aria-hidden="true" />
+								</picture>
+							</div>
+
+							<h4 class="visually-hidden">Categories:</h4>
+							<ul class="works__categories">
+								<li class="works__category works__category_frontend">frontend</li>
+
+								<li class="works__category works__category_design">design</li>
+
+								<li class="works__category works__category_support">support</li>
+							</ul>
+							<p class="works__address">
+								<svg width="40" height="10" class="works__chain">
+									<path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
+									<path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
+									<polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
+								</svg>
+
+								<span class="works__address-text">sensormatica.ru</span>
+							</p>
+						</li>
+
+						<li class="works__item">
+							<h3 class="works__title"><a class="works__link" href="https://www.sserussia.org/en/">Stockholm School of Economics Russia</a></h3>
+
+							<div class="works__img">
+								<picture>
+									<source srcset="/static/img/works/sse.webp 1x, /static/img/works/sse@2x.webp 2x" type="image/webp" />
+									<img src="/static/img/works/sse.png" srcset="/static/img/works/sse@2x.png 2x" alt="Stockholm School of Economics Russia,Стокгольмская Школа Экономики в России" aria-hidden="true" />
+								</picture>
+							</div>
+
+							<h4 class="visually-hidden">Categories:</h4>
+							<ul class="works__categories">
+								<li class="works__category works__category_frontend">frontend</li>
+
+								<li class="works__category works__category_design">design</li>
+
+								<li class="works__category works__category_support">support</li>
+							</ul>
+							<p class="works__address">
+								<svg width="40" height="10" class="works__chain">
+									<path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
+									<path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
+									<polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
+								</svg>
+
+								<span class="works__address-text">sserussia.org</span>
+							</p>
+						</li>
+
+						<li class="works__item">
+							<h3 class="works__title"><a class="works__link" href="https://bi-teh.ru/">Biteh store of industrial equipment</a></h3>
+
+							<div class="works__img">
+								<picture>
+									<source srcset="/static/img/works/biteh.webp 1x, /static/img/works/biteh@2x.webp 2x" type="image/webp" />
+									<img src="/static/img/works/biteh.png" srcset="/static/img/works/biteh@2x.png 2x" alt="Biteh store of industrial equipment,Магазин промышленного оборудования Битех" aria-hidden="true" />
+								</picture>
+							</div>
+
+							<h4 class="visually-hidden">Categories:</h4>
+							<ul class="works__categories">
+								<li class="works__category works__category_frontend">frontend</li>
+
+								<li class="works__category works__category_design">design</li>
+
+								<li class="works__category works__category_support">support</li>
+							</ul>
+							<p class="works__address">
+								<svg width="40" height="10" class="works__chain">
+									<path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
+									<path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
+									<polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
+								</svg>
+
+								<span class="works__address-text">bi-teh.ru</span>
+							</p>
+						</li>
+
+						<li class="works__item">
+							<h3 class="works__title"><a class="works__link" href="https://businesstat.ru/">BusinesStat Market reviews &amp; business plans store</a></h3>
+
+							<div class="works__img">
+								<picture>
+									<source srcset="/static/img/works/businesstat.webp 1x, /static/img/works/businesstat@2x.webp 2x" type="image/webp" />
+									<img src="/static/img/works/businesstat.png" srcset="/static/img/works/businesstat@2x.png 2x" alt="BusinesStat Market reviews &amp; business plans store,Готовые обзоры рынков и бизнес-планы БизнесСтат" aria-hidden="true" />
+								</picture>
+							</div>
+
+							<h4 class="visually-hidden">Categories:</h4>
+							<ul class="works__categories">
+								<li class="works__category works__category_frontend">frontend</li>
+							</ul>
+							<p class="works__address">
+								<svg width="40" height="10" class="works__chain">
+									<path d="M23,0 L19,0 L19,1.9 L23,1.9 C24.71,1.9 26.1,3.29 26.1,5 C26.1,6.71 24.71,8.1 23,8.1 L19,8.1 L19,10 L23,10 C25.76,10 28,7.76 28,5 C28,2.24 25.76,0 23,0 Z" id="chain_right"></path>
+									<path d="M9.9,5 C9.9,3.29 11.29,1.9 13,1.9 L17,1.9 L17,0 L13,0 C10.24,0 8,2.24 8,5 C8,7.76 10.24,10 13,10 L17,10 L17,8.1 L13,8.1 C11.29,8.1 9.9,6.71 9.9,5 Z" id="chain_left"></path>
+									<polygon points="14 6 22 6 22 4 14 4" id="chain_center"></polygon>
+								</svg>
+
+								<span class="works__address-text">businesstat.ru</span>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+				<section class="main__section">
+					<h2 class="main__heading">Чем я могу помочь</h2>
+					<p>Разработаю интерфейс с нуля или по готовым дизайн-макетам, подготовлю к установке на CMS или другой интеграции.</p>
+					<p><a href="/ru/services/" class="more-link">Услуги</a></p>
+
+					<div class="services">
+						<ul class="services__list">
+							<li class="services__item">
+								<h3 class="services__heading">Адаптив</h3>
+								<p class="services__text">Работа сайта на разрешениях с 0 пикселей до 4000</p>
+							</li>
+							<li class="services__item">
+								<h3 class="services__heading">Доступность</h3>
+								<p class="services__text">Сайт доступен с клавиатуры, для скринридеров, поисковых роботов и устройств с бородой больше, чем у Деда Мороза</p>
+							</li>
+							<li class="services__item">
+								<h3 class="services__heading">Валидность</h3>
+								<p class="services__text">Код соответствует современным стандартам и выглядит достойно в любых браузерах</p>
+							</li>
+						</ul>
+						<ul class="services__list">
+							<li class="services__item">
+								<h3 class="services__heading">SEO-оптимизация</h3>
+								<p class="services__text">Код хорошо читается роботами, а любой дизайн может быть представлен корректной семантической разметкой</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="main__section">
+					<h2 class="main__heading">Обо мне</h2>
+					<p>10 лет в отрасли</p>
+					<p>С 2009 года занимаюсь веб-дизайном</p>
+					<p>С 2013 года занимаюсь фронтендом</p>
+					<p>Я — разработчик интерфейсов из Санкт-Петербурга. Занимаюсь дизайном и фронтендом: работаю на стыке двух плотно пересекающихся областей.</p>
+					<p>Веб-разработка стала не только моей работой, но и увлечением, а ее безумные темпы развития только подстегивают интерес. Мне важно то, чем я занимаюсь, и я ценю работу с теми, кому не безразлично собственное дело.</p>
+				</section>
+			</main>
+		</div>
+
+		<script src="/static/js/app.js"></script>
+	</body>
 </html>

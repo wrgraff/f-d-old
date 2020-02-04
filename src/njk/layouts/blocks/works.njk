@@ -1,60 +1,60 @@
 {% set worksItems = [
     {
-        name: "Sensormatica equipment catalog",
+        name: ["Sensormatica equipment catalog", "Каталог оборудования Сенсорматики"],
         img: "sensormatica",
         address: 'sensormatica.ru',
         link: 'https://sensormatica.ru/',
         categories: ['frontend', 'design', 'support']
     },{
-        name: "Stockholm School of Economics Russia",
+        name: ["Stockholm School of Economics Russia", "Стокгольмская Школа Экономики в России"],
         img: "sse",
         address: 'sserussia.org',
         link: 'https://www.sserussia.org/en/',
         categories: ['frontend', 'design', 'support']
     },{
-        name: "Biteh store of industrial equipment",
+        name: ["Biteh store of industrial equipment", "Магазин промышленного оборудования Битех"],
         img: "biteh",
         address: 'bi-teh.ru',
         link: 'https://bi-teh.ru/',
         categories: ['frontend', 'design', 'support']
     },{
-        name: "BusinesStat Market reviews & business plans store",
+        name: ["BusinesStat Market reviews & business plans store", "Готовые обзоры рынков и бизнес-планы БизнесСтат"],
         img: "businesstat",
         address: 'businesstat.ru',
         link: 'https://businesstat.ru/',
         categories: ['frontend']
     },{
-        name: "FLOVER bouquet shop",
+        name: ["FLOVER bouquet shop", "Магазин букетов FLOVER"],
         img: "flover",
         address: 'floverart.ru',
         link: 'https://floverart.ru/',
         categories: ['frontend']
     },{
-        name: "Smart business lab trainings",
+        name: ["Smart Business Lab trainings", "Тренинги Smart Business Lab"],
         img: "sbl",
         address: 'smartbl.ru',
         link: 'http://smartbl.ru/',
         categories: ['frontend']
     },{
-        name: "United Design studio",
+        name: ["United Design studio", "Студия United Design"],
         img: "ud",
         address: 'uniteddesign.ru',
         link: 'https://uniteddesign.ru/',
         categories: ['frontend', 'design', 'support']
     },{
-        name: "Construction company Pilbet",
+        name: ["Construction company Pilbet", "Строительная компания Пилбет"],
         img: "pilbet",
         address: 'pilbet.rf',
         link: 'http://пилбет.рф/',
         categories: ['frontend']
     },{
-        name: "UP-quarters page",
+        name: ["UP-quarters page", "Лендинг UP-кварталов"],
         img: "up",
         address: '7035555.ru',
         link: 'http://7035555.ru/',
         categories: ['frontend']
     },{
-        name: "Meandr template page",
+        name: ["Meandr template page", "Шаблон страницы Meandr"],
         img: "meandr",
         address: 'meandr.frontend-design.ru',
         link: 'http://meandr.frontend-design.ru/',
@@ -64,16 +64,19 @@
 
 {% macro addWorksItem(name, img, address, link, categories) %}
     <li class="works__item">
-        <h3 class="works__title"><a class="works__link" href="{{ link }}">{{ name }}</a></h3>
+        <h3 class="works__title"><a class="works__link" href="{{ link }}">{{ name[0] if (lang == 'en') }}{{ name[1] if (lang == 'ru') }}</a></h3>
 
-        <picture class="works__img" aria-hidden="true">
-            <source srcset="/static/img/works/{{ img }}.webp 1x,
-                            /static/img/works/{{ img }}@2x.webp 2x"
-                    type="image/webp" />
-            <img src="/static/img/works/{{ img }}.png"
-                 srcset="/static/img/works/{{ img }}@2x.png 2x"
-                 alt="{{ name }}" />
-        </picture>
+		<div class="works__img">
+	        <picture>
+	            <source srcset="/static/img/works/{{ img }}.webp 1x,
+	                            /static/img/works/{{ img }}@2x.webp 2x"
+	                    type="image/webp" />
+	            <img src="/static/img/works/{{ img }}.png"
+	                 srcset="/static/img/works/{{ img }}@2x.png 2x"
+	                 alt="{{ name }}"
+					 aria-hidden="true" />
+	        </picture>
+		</div>
 
         <h4 class="visually-hidden">Categories:</h4>
         <ul class="works__categories">
@@ -95,6 +98,12 @@
 
 <ul class="works">
     {% for item in worksItems %}
-        {{ addWorksItem(item.name, item.img, item.address, item.link, item.categories) }}
+		{% if activePage == 'index' %}
+			{% if loop.index < 5 %}
+	        	{{ addWorksItem(item.name, item.img, item.address, item.link, item.categories) }}
+			{% endif %}
+		{% else %}
+			{{ addWorksItem(item.name, item.img, item.address, item.link, item.categories) }}
+		{% endif %}
     {% endfor %}
 </ul>

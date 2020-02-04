@@ -1,190 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Artur Trifonov: frontend developer | f—d</title>
+		<meta name="description" content="Artur Trifonov portfolio site: about, works and contacts" />
+		<meta name="keywords" content="frontend developer, Artur Trifonov, frontend, design" />
 
-    <title>Artur Trifonov: frontend developer | f—d</title>
-    <meta name="description" content="Artur Trifonov portfolio site: about, works and contacts" />
-    <meta name="keywords" content="frontend developer, Artur Trifonov, frontend, design" />
+		<link rel="stylesheet" href="/static/css/style.min.css" />
+		<link rel="icon" href="/static/img/favicons/favicon.ico" />
+		<link rel="icon" href="/static/img/favicons/base-16x16.png" sizes="16x16" />
+		<link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32" />
+		<link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32" />
+		<link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64" />
 
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="icon" href="/static/img/favicons/favicon.ico">
-    <link rel="icon" href="/static/img/favicons/base-16x16.png" sizes="16x16">
-    <link rel="icon" href="/static/img/favicons/base-24x24.png" sizes="32x32">
-    <link rel="icon" href="/static/img/favicons/base-32x32.png" sizes="32x32">
-    <link rel="icon" href="/static/img/favicons/base-64x64.png" sizes="64x64">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400|Ubuntu:300&display=swap&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="preload" href="/static/fonts/gotham-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- MS -->
-    <meta name="application-name" content="Site name">
-    <meta name="msapplication-TileImage" content="/static/img/favicons/tile.jpg">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <!-- OS X -->
-    <link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#6961bf">
-    <!-- iOS -->
-    <meta name="apple-mobile-web-app-title" content="Site name">
-    <link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png">
-    <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json">
+		<link rel="preload" href="/static/fonts/gotham-cyrillic.woff2" as="font" type="font/woff2" crossorigin />
 
-    <!-- og -->
-    <meta property="og:title" content="get from H1" />
-    <meta property="og:description" content="get from meta description" />
-    <meta property="og:image" content="/static/img/favicons/og.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Site name" />
-    <meta property="og:url" content="https://www.site.ru/" />
-    <meta property="og:locale" content="ru_RU" />
+		<!-- MS -->
+		<meta name="application-name" content="frontend—design" />
+		<meta name="msapplication-TileImage" content="/static/img/favicons/tile.jpg" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+		<!-- OS X -->
+		<link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#6961bf" />
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-title" content="frontend—design" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/static/img/favicons/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/static/img/favicons/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon-180x180.png" />
+		<!-- Manifest -->
+		<link rel="manifest" href="/manifest.json" />
 
-</head>
+		<!-- og -->
+		<meta property="og:title" content="Artur Trifonov: frontend developer" />
+		<meta property="og:description" content="Artur Trifonov portfolio site: about, works and contacts" />
+		<meta property="og:image" content="/static/img/favicons/og.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="frontend—design" />
+		<meta property="og:url" content="https://frontend-design.ru/" />
+		<meta property="og:locale" content="ru_RU" />
+	</head>
 
-<body>
-    <div class="page-layout">
-        <main class="page-layout__main main">
-            <div class="main__header">
-                <a href="/" class="name">Artur Trifonov</a>
-            </div>
+	<body>
+		<div class="page-layout">
+			<header class="page-layout__header page-header">
+				<div class="page-header__controls">
+					<button class="page-header__menu-button page-header__menu-button_hidden">
+						<span class="visually-hidden">
+							Меню
+						</span>
+					</button>
 
-            <section class="main__section">
-                <h1 class="main__heading">Услуги</h1>
+					<a href="/" class="page-header__logo logo" aria-label="frontend-design">
+						<span class="logo__f">f</span>
+						<span class="logo__line"></span>
+						<span class="logo__d">d</span>
+					</a>
 
-                <ol>
-                    <li>
-                        <h2>Верстка</h2>
-                        <p>Есть готовый дизайн-макет? Подготовлю к установке на систему</p>
-                    </li>
-                    <li>
-                        <h2>Дизайн + верстка</h2>
-                        <p>Использую метод дизайна в браузере, так что верстка будет готова сразу</p>
-                    </li>
-                    <li>
-                        <h2>Внедрение адаптива</h2>
-                        <p>Подготовлю сайт к работе на всех мыслимых устройствах</p>
-                    </li>
-                    <li>
-                        <h2>Устранение ошибок</h2>
-                        <p>Исправлю ошибки, оптимизирую код, сниму порчу</p>
-                    </li>
-                    <li>
-                        <h2>Оптимизация сайта</h2>
-                        <p>Оптимизация под требования инструментов Google</p>
-                    </li>
-                </ol>
-            </section>
+					<a class="page-header__contact-button page-header__contact-button_hidden" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+						<span class="visually-hidden">
+							Написать мне
+						</span>
+					</a>
+				</div>
 
-        </main>
+				<nav class="page-header__nav">
+					<ul class="page-header__menu menu">
+						<li class="menu__item">
+							<a href="/works/" class="menu__link">Works</a>
+						</li>
 
-        <aside class="page-layout__aside aside">
-            <header class="aside__header">
-                <a href="/" class="logo" aria-label="frontend-design">
-                    <span class="logo__f">f</span>
-                    <span class="logo__line"></span>
-                    <span class="logo__d">d</span>
-                </a>
-            </header>
+						<li class="menu__item">
+							<a href="/about/" class="menu__link">About</a>
+						</li>
 
+						<li class="menu__item">
+							<a href="/contacts/" class="menu__link">Contacts</a>
+						</li>
+					</ul>
 
+					<div class="page-header__contacts">
+						<ul class="page-header__social social social_header social_light">
+							<li class="social__item">
+								<a class="social__link" href="#">gh</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">li</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">fb</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">tw</a>
+							</li>
+							<li class="social__item">
+								<a class="social__link" href="#">ha</a>
+							</li>
+						</ul>
 
+						<a class="button button_color_white" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">
+							Написать мне
 
+							<img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Написать мне" aria-hidden="true" />
+						</a>
+					</div>
+				</nav>
+			</header>
 
-            <nav class="aside__nav">
-                <ul class="menu">
+			<main class="page-layout__main main">
+				<div class="main__header">
+					<a href="/" class="name">Artur Trifonov</a>
+				</div>
 
+				<section class="main__section">
+					<h1 class="main__heading">Услуги</h1>
 
-                    <li class="menu__item">
-                        <a href="/works/" class="menu__link">Works</a>
-                    </li>
+					<ol>
+						<li>
+							<h2>Верстка</h2>
+							<p>Есть готовый дизайн-макет? Подготовлю к установке на систему</p>
+						</li>
+						<li>
+							<h2>Дизайн + верстка</h2>
+							<p>Использую метод дизайна в браузере, так что верстка будет готова сразу</p>
+						</li>
+						<li>
+							<h2>Внедрение адаптива</h2>
+							<p>Подготовлю сайт к работе на всех мыслимых устройствах</p>
+						</li>
+						<li>
+							<h2>Устранение ошибок</h2>
+							<p>Исправлю ошибки, оптимизирую код, сниму порчу</p>
+						</li>
+						<li>
+							<h2>Оптимизация сайта</h2>
+							<p>Оптимизация под требования инструментов Google</p>
+						</li>
+					</ol>
+				</section>
+			</main>
+		</div>
 
-
-
-                    <li class="menu__item">
-                        <a href="/about/" class="menu__link">About</a>
-                    </li>
-
-
-
-                    <li class="menu__item">
-                        <a href="/contacts/" class="menu__link">Contacts</a>
-                    </li>
-
-
-                </ul>
-            </nav>
-
-
-            <footer class="aside__footer">
-                <ul class="aside__social social social_aside social_light">
-                    <li class="social__item">
-                        <a class="social__link" href="#">gh</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">li</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">fb</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">tw</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link" href="#">ha</a>
-                    </li>
-                </ul>
-
-                <a class="button button_color_white button_expanded" href="mailto:hello@frontend-design.ru?subject=Message%20from%20frontend-design.ru" target="_blank">Contact me <img class="button__img button__img_right" src="/static/img/ico/send.svg" alt="Contact me" aria-hidden="true"></a>
-            </footer>
-        </aside>
-    </div>
-
-    <div class="modal" id="contact-me" aria-hidden="true">
-        <section class="modal__overlay" tabindex="-1">
-            <div class="modal__overlay-close" data-modal-close></div>
-            <form action="/contact-me/result/" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="testContentTitle">
-                <header class="modal__header">
-                    <h2 class="modal__title" id="testContentTitle">Написать мне</h2>
-                </header>
-
-                <div class="modal__body">
-                    <label class="field form__item">
-                        <input type="text" name="name" required class="field__input" placeholder="Иван Царевич" />
-                        <p class="field__title">Пожалуйста, представьтесь</p>
-                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
-                    </label>
-
-                    <label class="field form__item">
-                        <input type="email" name="email" required class="field__input" placeholder="example@domain.ru" />
-                        <p class="field__title">Электронный адрес</p>
-                        <p class="field__helper">Укажите действующий адрес, чтобы я смог ответить</p>
-                    </label>
-
-                    <label class="field form__item">
-                        <textarea name="text" rows="8" class="field__input" placeholder="Хочу обсудить проект... / Есть задача... / Нужна помощь, есть проблема..."></textarea>
-                        <p class="field__title">Пожалуйста, представьтесь</p>
-                        <p class="field__helper">Как вам хотелось бы, чтобы к вам обращались</p>
-                    </label>
-
-                    <label class="checkbox form__item">
-                        <input type="checkbox" name="agree" class="checkbox__input" required checked />
-                        <span class="checkbox__text">Я соглашаюсь на обработку персональных данных</span>
-                        <span class="checkbox__helper">Нажимая на кнопку &laquo;отправить&raquo;, вы даете согласие на обработку персональных данных и&nbsp;соглашаетесь c политикой конфиденциальности</span>
-                    </label>
-                </div>
-
-                <footer class="modal__footer form__footer">
-                    <button type="button" class="button button_size_large button_color_gray" data-modal-close>Отменить</button>
-                    <button type="submit" class="button button_size_large">Отправить</button>
-                </footer>
-
-                <button type="button" class="modal__close" data-modal-close></button>
-            </form>
-        </section>
-    </div>
-
-</body>
-
+		<script src="/static/js/app.js"></script>
+	</body>
 </html>

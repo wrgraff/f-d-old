@@ -1,0 +1,25 @@
+.more-link {
+	// --color-primary-lightness: 90%;
+
+	position: relative;
+
+	// color: $color-primary;
+	border-bottom: 3px solid $color-primary;
+
+	font-weight: 400;
+
+	// &::after {
+	// 	content: '';
+	//
+	// 	position: absolute;
+	// 	top: calc(50% - 2px);
+	// 	right: -8px;
+	// 	left: -8px;
+	// 	z-index: -1;
+	//
+	// 	height: 4px;
+	//
+	// 	background-color: $color-primary;
+	// 	--color-primary-lightness: 90%;
+	// }
+}
